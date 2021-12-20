@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SecondViewController" customModule="TasMovie" customModuleProvider="target">
             <connections>
+                <outlet property="tabBarHeight" destination="8o9-VJ-7fc" id="tVW-MS-EuA"/>
                 <outlet property="tabBarView" destination="Gp7-vb-3I5" id="a0J-v2-v5E"/>
                 <outlet property="view" destination="iN0-l3-epB" id="aAv-cs-SO5"/>
             </connections>

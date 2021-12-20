@@ -14,10 +14,10 @@ public class ViewManager {
     public var currentViewController: TSViewController? {
         return viewControllers.last
     }
-    public var rootViewController: TSViewController? {
+    private var rootViewController: TSViewController? {
         return viewControllers.first
     }
-    public var viewControllers: [TSViewController] = []
+    private var viewControllers: [TSViewController] = []
     
     private init() {}
     

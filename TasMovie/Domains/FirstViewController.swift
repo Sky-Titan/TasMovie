@@ -11,20 +11,13 @@ import TasBase
 class FirstViewController: TSViewController {
 
     @IBOutlet weak var tabBarView: TabBarView!
+    @IBOutlet weak var tabBarHeight: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tabBarView.tabBarController = self.tabBarController
-        // Do any additional setup after loading the view.
-    }
-
-    init() {
-        super.init(nibName: nil, bundle: nil)
-        self.tabBarItem = UITabBarItem(title: "First", image: nil, tag: 0)
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
+        tabBarHeight.constant = TabBarView.Const.height
     }
 
 }

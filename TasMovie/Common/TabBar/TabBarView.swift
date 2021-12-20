@@ -63,5 +63,6 @@ class TabBarView: BaseXibView {
     enum Const {
         static let selectedColor = UIColor.red
         static let unselectedColor = UIColor.link
+        static let height: CGFloat = 120
     }
 }

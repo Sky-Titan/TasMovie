@@ -26,6 +26,8 @@
 		AB777F25277098220044DE68 /* TabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB777F24277098220044DE68 /* TabBarView.xib */; };
 		AB777F2927709D900044DE68 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB777F2827709D900044DE68 /* SecondViewController.swift */; };
 		AB777F2B27709DBD0044DE68 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB777F2A27709DBD0044DE68 /* SecondViewController.xib */; };
+		AB777F2D27709F400044DE68 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB777F2C27709F400044DE68 /* ThirdViewController.swift */; };
+		AB777F2F27709F5C0044DE68 /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB777F2E27709F5C0044DE68 /* ThirdViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,8 @@
 		AB777F24277098220044DE68 /* TabBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarView.xib; sourceTree = "<group>"; };
 		AB777F2827709D900044DE68 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		AB777F2A27709DBD0044DE68 /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
+		AB777F2C27709F400044DE68 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		AB777F2E27709F5C0044DE68 /* ThirdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +185,8 @@
 				AB777F1C277093ED0044DE68 /* FirstViewController.xib */,
 				AB777F2827709D900044DE68 /* SecondViewController.swift */,
 				AB777F2A27709DBD0044DE68 /* SecondViewController.xib */,
+				AB777F2C27709F400044DE68 /* ThirdViewController.swift */,
+				AB777F2E27709F5C0044DE68 /* ThirdViewController.xib */,
 			);
 			path = Domains;
 			sourceTree = "<group>";
@@ -309,6 +315,7 @@
 			files = (
 				AB777EEE277093040044DE68 /* LaunchScreen.storyboard in Resources */,
 				AB777EEB277093040044DE68 /* Assets.xcassets in Resources */,
+				AB777F2F27709F5C0044DE68 /* ThirdViewController.xib in Resources */,
 				AB777F25277098220044DE68 /* TabBarView.xib in Resources */,
 				AB777F1D277093ED0044DE68 /* FirstViewController.xib in Resources */,
 				AB777F2B27709DBD0044DE68 /* SecondViewController.xib in Resources */,
@@ -340,6 +347,7 @@
 				AB777EE2277093040044DE68 /* AppDelegate.swift in Sources */,
 				AB777F23277098000044DE68 /* TabBarView.swift in Sources */,
 				AB777F2927709D900044DE68 /* SecondViewController.swift in Sources */,
+				AB777F2D27709F400044DE68 /* ThirdViewController.swift in Sources */,
 				AB777EE4277093040044DE68 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

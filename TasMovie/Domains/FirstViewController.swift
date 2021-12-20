@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import TasPackage
 import TasBase
 
 class FirstViewController: TSViewController {

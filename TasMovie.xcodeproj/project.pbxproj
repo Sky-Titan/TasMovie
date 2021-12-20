@@ -28,6 +28,9 @@
 		AB777F2B27709DBD0044DE68 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB777F2A27709DBD0044DE68 /* SecondViewController.xib */; };
 		AB777F2D27709F400044DE68 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB777F2C27709F400044DE68 /* ThirdViewController.swift */; };
 		AB777F2F27709F5C0044DE68 /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB777F2E27709F5C0044DE68 /* ThirdViewController.xib */; };
+		AB777F5F2770A4E30044DE68 /* TasPackage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB777F5E2770A4E30044DE68 /* TasPackage.framework */; };
+		AB777F602770A4E30044DE68 /* TasPackage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AB777F5E2770A4E30044DE68 /* TasPackage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AB777F622770A57D0044DE68 /* MyLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = AB777F612770A57D0044DE68 /* MyLibrary */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				AB777F602770A4E30044DE68 /* TasPackage.framework in Embed Frameworks */,
 				AB777F18277093A40044DE68 /* TasExample.framework in Embed Frameworks */,
 				AB777F16277093A40044DE68 /* TasBase.framework in Embed Frameworks */,
 				AB777F1A277093A40044DE68 /* TasUtility.framework in Embed Frameworks */,
@@ -86,6 +90,7 @@
 		AB777F2A27709DBD0044DE68 /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 		AB777F2C27709F400044DE68 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		AB777F2E27709F5C0044DE68 /* ThirdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdViewController.xib; sourceTree = "<group>"; };
+		AB777F5E2770A4E30044DE68 /* TasPackage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TasPackage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,9 +98,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB777F5F2770A4E30044DE68 /* TasPackage.framework in Frameworks */,
 				AB777F17277093A40044DE68 /* TasExample.framework in Frameworks */,
 				AB777F15277093A40044DE68 /* TasBase.framework in Frameworks */,
 				AB777F19277093A40044DE68 /* TasUtility.framework in Frameworks */,
+				AB777F622770A57D0044DE68 /* MyLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +178,7 @@
 		AB777F11277093A30044DE68 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AB777F5E2770A4E30044DE68 /* TasPackage.framework */,
 				AB777F12277093A40044DE68 /* TasBase.framework */,
 				AB777F13277093A40044DE68 /* TasExample.framework */,
 				AB777F14277093A40044DE68 /* TasUtility.framework */,
@@ -225,6 +233,9 @@
 			dependencies = (
 			);
 			name = TasMovie;
+			packageProductDependencies = (
+				AB777F612770A57D0044DE68 /* MyLibrary */,
+			);
 			productName = TasMovie;
 			productReference = AB777EDE277093040044DE68 /* TasMovie.app */;
 			productType = "com.apple.product-type.application";
@@ -686,6 +697,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AB777F612770A57D0044DE68 /* MyLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MyLibrary;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AB777ED6277093040044DE68 /* Project object */;
 }

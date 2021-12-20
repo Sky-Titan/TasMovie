@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TabBarView" customModule="TasMovie" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="E0m-ON-5sr"/>
+                <outlet property="firstItem" destination="oGU-7d-zVb" id="f6g-P3-soc"/>
+                <outlet property="secondItem" destination="scr-lJ-1HH" id="CZg-GJ-SRQ"/>
+                <outlet property="thirdItem" destination="CDY-6e-2nF" id="Osd-s7-Voy"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGU-7d-zVb">
+                    <rect key="frame" x="0.0" y="0.0" width="138" height="150"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="First">
+                        <color key="titleColor" systemColor="linkColor"/>
+                    </state>
+                    <connections>
+                        <action selector="firstClick:" destination="-1" eventType="touchUpInside" id="bO6-eH-ny9"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDY-6e-2nF">
+                    <rect key="frame" x="276" y="0.0" width="138" height="150"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Third">
+                        <color key="titleColor" systemColor="linkColor"/>
+                    </state>
+                    <connections>
+                        <action selector="thirdClick:" destination="-1" eventType="touchUpInside" id="Lix-Tm-FTj"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="scr-lJ-1HH">
+                    <rect key="frame" x="138" y="0.0" width="138" height="150"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Second">
+                        <color key="titleColor" systemColor="linkColor"/>
+                    </state>
+                    <connections>
+                        <action selector="secondClick:" destination="-1" eventType="touchUpInside" id="x1a-ah-fcc"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemGray6Color"/>
+            <constraints>
+                <constraint firstItem="scr-lJ-1HH" firstAttribute="leading" secondItem="oGU-7d-zVb" secondAttribute="trailing" id="7pJ-tM-woN"/>
+                <constraint firstItem="oGU-7d-zVb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="8W1-oi-H9J"/>
+                <constraint firstItem="oGU-7d-zVb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9ZO-4s-sdF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="CDY-6e-2nF" secondAttribute="trailing" id="ETq-Zf-Qe0"/>
+                <constraint firstItem="CDY-6e-2nF" firstAttribute="leading" secondItem="scr-lJ-1HH" secondAttribute="trailing" id="MTu-Cd-TGm"/>
+                <constraint firstItem="scr-lJ-1HH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Tua-HM-KRI"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="scr-lJ-1HH" secondAttribute="bottom" id="aGt-UW-HaX"/>
+                <constraint firstItem="CDY-6e-2nF" firstAttribute="width" secondItem="oGU-7d-zVb" secondAttribute="width" id="cDh-m5-hgV"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="CDY-6e-2nF" secondAttribute="bottom" id="eUD-X0-OPw"/>
+                <constraint firstItem="scr-lJ-1HH" firstAttribute="width" secondItem="oGU-7d-zVb" secondAttribute="width" id="fuM-mt-X8z"/>
+                <constraint firstItem="scr-lJ-1HH" firstAttribute="leading" secondItem="oGU-7d-zVb" secondAttribute="trailing" id="iT2-GC-jKB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="oGU-7d-zVb" secondAttribute="bottom" id="m9x-SR-Bhw"/>
+                <constraint firstItem="CDY-6e-2nF" firstAttribute="leading" secondItem="scr-lJ-1HH" secondAttribute="trailing" id="vZc-PD-WIe"/>
+                <constraint firstItem="CDY-6e-2nF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="xFW-aF-mOY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="132" y="112"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,633 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AB4ED019275F705100976E1B /* ViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4ED018275F705100976E1B /* ViewManager.swift */; };
+		AB94D75127645DD70026B2E6 /* BaseCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB94D75027645DD70026B2E6 /* BaseCollectionView.swift */; };
+		AB94D75327645EA90026B2E6 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB94D75227645EA90026B2E6 /* BaseCollectionViewCell.swift */; };
+		AB94D755276469570026B2E6 /* BaseTableHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB94D754276469570026B2E6 /* BaseTableHeaderFooterView.swift */; };
+		AB94D7572764717E0026B2E6 /* BaseListCellViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB94D7562764717E0026B2E6 /* BaseListCellViewProtocol.swift */; };
+		AB94D75A276474760026B2E6 /* BaseListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB94D759276474760026B2E6 /* BaseListViewProtocol.swift */; };
+		AB94D75C27647C4E0026B2E6 /* BaseCollectionHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB94D75B27647C4E0026B2E6 /* BaseCollectionHeaderFooterView.swift */; };
+		ABBAF63F2754EFA400DF17C3 /* TasBase.docc in Sources */ = {isa = PBXBuildFile; fileRef = ABBAF63E2754EFA400DF17C3 /* TasBase.docc */; };
+		ABBAF6452754EFA400DF17C3 /* TasBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABBAF63A2754EFA400DF17C3 /* TasBase.framework */; };
+		ABBAF64A2754EFA400DF17C3 /* TasBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBAF6492754EFA400DF17C3 /* TasBaseTests.swift */; };
+		ABBAF64B2754EFA400DF17C3 /* TasBase.h in Headers */ = {isa = PBXBuildFile; fileRef = ABBAF63D2754EFA400DF17C3 /* TasBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ABBAF6582754EFFF00DF17C3 /* TSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBAF6572754EFFF00DF17C3 /* TSViewController.swift */; };
+		ABBAF65A2754F0CB00DF17C3 /* BaseXibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBAF6592754F0CB00DF17C3 /* BaseXibView.swift */; };
+		ABBAF65C2754F1BC00DF17C3 /* BaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBAF65B2754F1BC00DF17C3 /* BaseTableView.swift */; };
+		ABC9A0D227563A6F002B3C3C /* BaseTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC9A0D127563A6F002B3C3C /* BaseTableCellView.swift */; };
+		ABC9A0D527564037002B3C3C /* TasUtility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABC9A0D427564037002B3C3C /* TasUtility.framework */; };
+		ABC9A0D627564037002B3C3C /* TasUtility.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ABC9A0D427564037002B3C3C /* TasUtility.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ABE978A5276342AB00B4DADC /* ColorDummyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB33190727633F7300B297F3 /* ColorDummyViewModel.swift */; };
+		ABE978A6276342B400B4DADC /* ColorDummyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB33190927633F7300B297F3 /* ColorDummyView.swift */; };
+		ABE978A7276342B700B4DADC /* ColorDummyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB33190A27633F7300B297F3 /* ColorDummyView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ABBAF6462754EFA400DF17C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABBAF6312754EFA400DF17C3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABBAF6392754EFA400DF17C3;
+			remoteInfo = TasBase;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ABC9A0D727564037002B3C3C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				ABC9A0D627564037002B3C3C /* TasUtility.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		AB33190727633F7300B297F3 /* ColorDummyViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorDummyViewModel.swift; sourceTree = "<group>"; };
+		AB33190927633F7300B297F3 /* ColorDummyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorDummyView.swift; sourceTree = "<group>"; };
+		AB33190A27633F7300B297F3 /* ColorDummyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorDummyView.xib; sourceTree = "<group>"; };
+		AB4ED018275F705100976E1B /* ViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewManager.swift; sourceTree = "<group>"; };
+		AB94D75027645DD70026B2E6 /* BaseCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionView.swift; sourceTree = "<group>"; };
+		AB94D75227645EA90026B2E6 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		AB94D754276469570026B2E6 /* BaseTableHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableHeaderFooterView.swift; sourceTree = "<group>"; };
+		AB94D7562764717E0026B2E6 /* BaseListCellViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListCellViewProtocol.swift; sourceTree = "<group>"; };
+		AB94D759276474760026B2E6 /* BaseListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListViewProtocol.swift; sourceTree = "<group>"; };
+		AB94D75B27647C4E0026B2E6 /* BaseCollectionHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionHeaderFooterView.swift; sourceTree = "<group>"; };
+		ABBAF63A2754EFA400DF17C3 /* TasBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TasBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABBAF63D2754EFA400DF17C3 /* TasBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TasBase.h; sourceTree = "<group>"; };
+		ABBAF63E2754EFA400DF17C3 /* TasBase.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = TasBase.docc; sourceTree = "<group>"; };
+		ABBAF6442754EFA400DF17C3 /* TasBaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TasBaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABBAF6492754EFA400DF17C3 /* TasBaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasBaseTests.swift; sourceTree = "<group>"; };
+		ABBAF6572754EFFF00DF17C3 /* TSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSViewController.swift; sourceTree = "<group>"; };
+		ABBAF6592754F0CB00DF17C3 /* BaseXibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseXibView.swift; sourceTree = "<group>"; };
+		ABBAF65B2754F1BC00DF17C3 /* BaseTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableView.swift; sourceTree = "<group>"; };
+		ABC9A0D127563A6F002B3C3C /* BaseTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableCellView.swift; sourceTree = "<group>"; };
+		ABC9A0D427564037002B3C3C /* TasUtility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TasUtility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ABBAF6372754EFA400DF17C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABC9A0D527564037002B3C3C /* TasUtility.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABBAF6412754EFA400DF17C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABBAF6452754EFA400DF17C3 /* TasBase.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AB33190827633F7300B297F3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AB33190727633F7300B297F3 /* ColorDummyViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AB33190B27633F7300B297F3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AB33190927633F7300B297F3 /* ColorDummyView.swift */,
+				AB33190A27633F7300B297F3 /* ColorDummyView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AB33190C27633F7300B297F3 /* DummyView */ = {
+			isa = PBXGroup;
+			children = (
+				AB33190827633F7300B297F3 /* ViewModel */,
+				AB33190B27633F7300B297F3 /* View */,
+			);
+			path = DummyView;
+			sourceTree = "<group>";
+		};
+		AB3319102763412E00B297F3 /* TSViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ABBAF6572754EFFF00DF17C3 /* TSViewController.swift */,
+			);
+			path = TSViewController;
+			sourceTree = "<group>";
+		};
+		AB3319112763413B00B297F3 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				ABBAF6592754F0CB00DF17C3 /* BaseXibView.swift */,
+				AB94D758276473860026B2E6 /* BaseList */,
+			);
+			path = BaseView;
+			sourceTree = "<group>";
+		};
+		AB3319122763414C00B297F3 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				AB4ED018275F705100976E1B /* ViewManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		AB94D74F27645DC70026B2E6 /* BaseCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				AB94D75027645DD70026B2E6 /* BaseCollectionView.swift */,
+				AB94D75227645EA90026B2E6 /* BaseCollectionViewCell.swift */,
+				AB94D75B27647C4E0026B2E6 /* BaseCollectionHeaderFooterView.swift */,
+			);
+			path = BaseCollectionView;
+			sourceTree = "<group>";
+		};
+		AB94D758276473860026B2E6 /* BaseList */ = {
+			isa = PBXGroup;
+			children = (
+				AB94D7562764717E0026B2E6 /* BaseListCellViewProtocol.swift */,
+				AB94D759276474760026B2E6 /* BaseListViewProtocol.swift */,
+				AB94D74F27645DC70026B2E6 /* BaseCollectionView */,
+				ABBAF65D2754F1D500DF17C3 /* BaseTableView */,
+			);
+			path = BaseList;
+			sourceTree = "<group>";
+		};
+		ABBAF6302754EFA400DF17C3 = {
+			isa = PBXGroup;
+			children = (
+				ABBAF63C2754EFA400DF17C3 /* TasBase */,
+				ABBAF6482754EFA400DF17C3 /* TasBaseTests */,
+				ABBAF63B2754EFA400DF17C3 /* Products */,
+				ABC9A0D327564037002B3C3C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		ABBAF63B2754EFA400DF17C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABBAF63A2754EFA400DF17C3 /* TasBase.framework */,
+				ABBAF6442754EFA400DF17C3 /* TasBaseTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ABBAF63C2754EFA400DF17C3 /* TasBase */ = {
+			isa = PBXGroup;
+			children = (
+				AB3319122763414C00B297F3 /* Manager */,
+				AB3319112763413B00B297F3 /* BaseView */,
+				AB3319102763412E00B297F3 /* TSViewController */,
+				AB33190C27633F7300B297F3 /* DummyView */,
+				ABBAF63D2754EFA400DF17C3 /* TasBase.h */,
+				ABBAF63E2754EFA400DF17C3 /* TasBase.docc */,
+			);
+			path = TasBase;
+			sourceTree = "<group>";
+		};
+		ABBAF6482754EFA400DF17C3 /* TasBaseTests */ = {
+			isa = PBXGroup;
+			children = (
+				ABBAF6492754EFA400DF17C3 /* TasBaseTests.swift */,
+			);
+			path = TasBaseTests;
+			sourceTree = "<group>";
+		};
+		ABBAF65D2754F1D500DF17C3 /* BaseTableView */ = {
+			isa = PBXGroup;
+			children = (
+				ABBAF65B2754F1BC00DF17C3 /* BaseTableView.swift */,
+				ABC9A0D127563A6F002B3C3C /* BaseTableCellView.swift */,
+				AB94D754276469570026B2E6 /* BaseTableHeaderFooterView.swift */,
+			);
+			path = BaseTableView;
+			sourceTree = "<group>";
+		};
+		ABC9A0D327564037002B3C3C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ABC9A0D427564037002B3C3C /* TasUtility.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		ABBAF6352754EFA400DF17C3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABBAF64B2754EFA400DF17C3 /* TasBase.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		ABBAF6392754EFA400DF17C3 /* TasBase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABBAF64E2754EFA400DF17C3 /* Build configuration list for PBXNativeTarget "TasBase" */;
+			buildPhases = (
+				ABBAF6352754EFA400DF17C3 /* Headers */,
+				ABBAF6362754EFA400DF17C3 /* Sources */,
+				ABBAF6372754EFA400DF17C3 /* Frameworks */,
+				ABBAF6382754EFA400DF17C3 /* Resources */,
+				ABC9A0D727564037002B3C3C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TasBase;
+			productName = TasBase;
+			productReference = ABBAF63A2754EFA400DF17C3 /* TasBase.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		ABBAF6432754EFA400DF17C3 /* TasBaseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABBAF6512754EFA400DF17C3 /* Build configuration list for PBXNativeTarget "TasBaseTests" */;
+			buildPhases = (
+				ABBAF6402754EFA400DF17C3 /* Sources */,
+				ABBAF6412754EFA400DF17C3 /* Frameworks */,
+				ABBAF6422754EFA400DF17C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ABBAF6472754EFA400DF17C3 /* PBXTargetDependency */,
+			);
+			name = TasBaseTests;
+			productName = TasBaseTests;
+			productReference = ABBAF6442754EFA400DF17C3 /* TasBaseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ABBAF6312754EFA400DF17C3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					ABBAF6392754EFA400DF17C3 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					ABBAF6432754EFA400DF17C3 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+				};
+			};
+			buildConfigurationList = ABBAF6342754EFA400DF17C3 /* Build configuration list for PBXProject "TasBase" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ABBAF6302754EFA400DF17C3;
+			productRefGroup = ABBAF63B2754EFA400DF17C3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ABBAF6392754EFA400DF17C3 /* TasBase */,
+				ABBAF6432754EFA400DF17C3 /* TasBaseTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ABBAF6382754EFA400DF17C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABE978A7276342B700B4DADC /* ColorDummyView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABBAF6422754EFA400DF17C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ABBAF6362754EFA400DF17C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB4ED019275F705100976E1B /* ViewManager.swift in Sources */,
+				AB94D75C27647C4E0026B2E6 /* BaseCollectionHeaderFooterView.swift in Sources */,
+				AB94D75A276474760026B2E6 /* BaseListViewProtocol.swift in Sources */,
+				AB94D7572764717E0026B2E6 /* BaseListCellViewProtocol.swift in Sources */,
+				ABBAF65C2754F1BC00DF17C3 /* BaseTableView.swift in Sources */,
+				ABC9A0D227563A6F002B3C3C /* BaseTableCellView.swift in Sources */,
+				ABE978A5276342AB00B4DADC /* ColorDummyViewModel.swift in Sources */,
+				ABBAF63F2754EFA400DF17C3 /* TasBase.docc in Sources */,
+				AB94D755276469570026B2E6 /* BaseTableHeaderFooterView.swift in Sources */,
+				AB94D75327645EA90026B2E6 /* BaseCollectionViewCell.swift in Sources */,
+				AB94D75127645DD70026B2E6 /* BaseCollectionView.swift in Sources */,
+				ABE978A6276342B400B4DADC /* ColorDummyView.swift in Sources */,
+				ABBAF65A2754F0CB00DF17C3 /* BaseXibView.swift in Sources */,
+				ABBAF6582754EFFF00DF17C3 /* TSViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABBAF6402754EFA400DF17C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABBAF64A2754EFA400DF17C3 /* TasBaseTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ABBAF6472754EFA400DF17C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABBAF6392754EFA400DF17C3 /* TasBase */;
+			targetProxy = ABBAF6462754EFA400DF17C3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		ABBAF64C2754EFA400DF17C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		ABBAF64D2754EFA400DF17C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		ABBAF64F2754EFA400DF17C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4DUZKVXU2R;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Tas.TasBase;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ABBAF6502754EFA400DF17C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4DUZKVXU2R;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Tas.TasBase;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		ABBAF6522754EFA400DF17C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4DUZKVXU2R;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Tas.TasBaseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ABBAF6532754EFA400DF17C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4DUZKVXU2R;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Tas.TasBaseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ABBAF6342754EFA400DF17C3 /* Build configuration list for PBXProject "TasBase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABBAF64C2754EFA400DF17C3 /* Debug */,
+				ABBAF64D2754EFA400DF17C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABBAF64E2754EFA400DF17C3 /* Build configuration list for PBXNativeTarget "TasBase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABBAF64F2754EFA400DF17C3 /* Debug */,
+				ABBAF6502754EFA400DF17C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABBAF6512754EFA400DF17C3 /* Build configuration list for PBXNativeTarget "TasBaseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABBAF6522754EFA400DF17C3 /* Debug */,
+				ABBAF6532754EFA400DF17C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ABBAF6312754EFA400DF17C3 /* Project object */;
+}

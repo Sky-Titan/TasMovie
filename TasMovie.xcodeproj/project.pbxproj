@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AB777EE2277093040044DE68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB777EE1277093040044DE68 /* AppDelegate.swift */; };
+		AB777EE4277093040044DE68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB777EE3277093040044DE68 /* SceneDelegate.swift */; };
+		AB777EE6277093040044DE68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB777EE5277093040044DE68 /* ViewController.swift */; };
+		AB777EE9277093040044DE68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB777EE7277093040044DE68 /* Main.storyboard */; };
+		AB777EEB277093040044DE68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB777EEA277093040044DE68 /* Assets.xcassets */; };
+		AB777EEE277093040044DE68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB777EEC277093040044DE68 /* LaunchScreen.storyboard */; };
+		AB777EF9277093050044DE68 /* TasMovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB777EF8277093050044DE68 /* TasMovieTests.swift */; };
+		AB777F03277093050044DE68 /* TasMovieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB777F02277093050044DE68 /* TasMovieUITests.swift */; };
+		AB777F05277093050044DE68 /* TasMovieUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB777F04277093050044DE68 /* TasMovieUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AB777EF5277093050044DE68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB777ED6277093040044DE68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB777EDD277093040044DE68;
+			remoteInfo = TasMovie;
+		};
+		AB777EFF277093050044DE68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB777ED6277093040044DE68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB777EDD277093040044DE68;
+			remoteInfo = TasMovie;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AB777EDE277093040044DE68 /* TasMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TasMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB777EE1277093040044DE68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AB777EE3277093040044DE68 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		AB777EE5277093040044DE68 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AB777EE8277093040044DE68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AB777EEA277093040044DE68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AB777EED277093040044DE68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AB777EEF277093040044DE68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB777EF4277093050044DE68 /* TasMovieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TasMovieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB777EF8277093050044DE68 /* TasMovieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasMovieTests.swift; sourceTree = "<group>"; };
+		AB777EFE277093050044DE68 /* TasMovieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TasMovieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB777F02277093050044DE68 /* TasMovieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasMovieUITests.swift; sourceTree = "<group>"; };
+		AB777F04277093050044DE68 /* TasMovieUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasMovieUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AB777EDB277093040044DE68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB777EF1277093050044DE68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB777EFB277093050044DE68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AB777ED5277093040044DE68 = {
+			isa = PBXGroup;
+			children = (
+				AB777EE0277093040044DE68 /* TasMovie */,
+				AB777EF7277093050044DE68 /* TasMovieTests */,
+				AB777F01277093050044DE68 /* TasMovieUITests */,
+				AB777EDF277093040044DE68 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AB777EDF277093040044DE68 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB777EDE277093040044DE68 /* TasMovie.app */,
+				AB777EF4277093050044DE68 /* TasMovieTests.xctest */,
+				AB777EFE277093050044DE68 /* TasMovieUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AB777EE0277093040044DE68 /* TasMovie */ = {
+			isa = PBXGroup;
+			children = (
+				AB777EE1277093040044DE68 /* AppDelegate.swift */,
+				AB777EE3277093040044DE68 /* SceneDelegate.swift */,
+				AB777EE5277093040044DE68 /* ViewController.swift */,
+				AB777EE7277093040044DE68 /* Main.storyboard */,
+				AB777EEA277093040044DE68 /* Assets.xcassets */,
+				AB777EEC277093040044DE68 /* LaunchScreen.storyboard */,
+				AB777EEF277093040044DE68 /* Info.plist */,
+			);
+			path = TasMovie;
+			sourceTree = "<group>";
+		};
+		AB777EF7277093050044DE68 /* TasMovieTests */ = {
+			isa = PBXGroup;
+			children = (
+				AB777EF8277093050044DE68 /* TasMovieTests.swift */,
+			);
+			path = TasMovieTests;
+			sourceTree = "<group>";
+		};
+		AB777F01277093050044DE68 /* TasMovieUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AB777F02277093050044DE68 /* TasMovieUITests.swift */,
+				AB777F04277093050044DE68 /* TasMovieUITestsLaunchTests.swift */,
+			);
+			path = TasMovieUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AB777EDD277093040044DE68 /* TasMovie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB777F08277093050044DE68 /* Build configuration list for PBXNativeTarget "TasMovie" */;
+			buildPhases = (
+				AB777EDA277093040044DE68 /* Sources */,
+				AB777EDB277093040044DE68 /* Frameworks */,
+				AB777EDC277093040044DE68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TasMovie;
+			productName = TasMovie;
+			productReference = AB777EDE277093040044DE68 /* TasMovie.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AB777EF3277093050044DE68 /* TasMovieTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB777F0B277093050044DE68 /* Build configuration list for PBXNativeTarget "TasMovieTests" */;
+			buildPhases = (
+				AB777EF0277093050044DE68 /* Sources */,
+				AB777EF1277093050044DE68 /* Frameworks */,
+				AB777EF2277093050044DE68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB777EF6277093050044DE68 /* PBXTargetDependency */,
+			);
+			name = TasMovieTests;
+			productName = TasMovieTests;
+			productReference = AB777EF4277093050044DE68 /* TasMovieTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AB777EFD277093050044DE68 /* TasMovieUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB777F0E277093050044DE68 /* Build configuration list for PBXNativeTarget "TasMovieUITests" */;
+			buildPhases = (
+				AB777EFA277093050044DE68 /* Sources */,
+				AB777EFB277093050044DE68 /* Frameworks */,
+				AB777EFC277093050044DE68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB777F00277093050044DE68 /* PBXTargetDependency */,
+			);
+			name = TasMovieUITests;
+			productName = TasMovieUITests;
+			productReference = AB777EFE277093050044DE68 /* TasMovieUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AB777ED6277093040044DE68 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					AB777EDD277093040044DE68 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					AB777EF3277093050044DE68 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = AB777EDD277093040044DE68;
+					};
+					AB777EFD277093050044DE68 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = AB777EDD277093040044DE68;
+					};
+				};
+			};
+			buildConfigurationList = AB777ED9277093040044DE68 /* Build configuration list for PBXProject "TasMovie" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AB777ED5277093040044DE68;
+			productRefGroup = AB777EDF277093040044DE68 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AB777EDD277093040044DE68 /* TasMovie */,
+				AB777EF3277093050044DE68 /* TasMovieTests */,
+				AB777EFD277093050044DE68 /* TasMovieUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AB777EDC277093040044DE68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB777EEE277093040044DE68 /* LaunchScreen.storyboard in Resources */,
+				AB777EEB277093040044DE68 /* Assets.xcassets in Resources */,
+				AB777EE9277093040044DE68 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB777EF2277093050044DE68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB777EFC277093050044DE68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AB777EDA277093040044DE68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB777EE6277093040044DE68 /* ViewController.swift in Sources */,
+				AB777EE2277093040044DE68 /* AppDelegate.swift in Sources */,
+				AB777EE4277093040044DE68 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB777EF0277093050044DE68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB777EF9277093050044DE68 /* TasMovieTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB777EFA277093050044DE68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB777F05277093050044DE68 /* TasMovieUITestsLaunchTests.swift in Sources */,
+				AB777F03277093050044DE68 /* TasMovieUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AB777EF6277093050044DE68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB777EDD277093040044DE68 /* TasMovie */;
+			targetProxy = AB777EF5277093050044DE68 /* PBXContainerItemProxy */;
+		};
+		AB777F00277093050044DE68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB777EDD277093040044DE68 /* TasMovie */;
+			targetProxy = AB777EFF277093050044DE68 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AB777EE7277093040044DE68 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB777EE8277093040044DE68 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AB777EEC277093040044DE68 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB777EED277093040044DE68 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AB777F06277093050044DE68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AB777F07277093050044DE68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AB777F09277093050044DE68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4DUZKVXU2R;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TasMovie/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Tas.TasMovie;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AB777F0A277093050044DE68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4DUZKVXU2R;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TasMovie/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Tas.TasMovie;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AB777F0C277093050044DE68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4DUZKVXU2R;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Tas.TasMovieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TasMovie.app/TasMovie";
+			};
+			name = Debug;
+		};
+		AB777F0D277093050044DE68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4DUZKVXU2R;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Tas.TasMovieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TasMovie.app/TasMovie";
+			};
+			name = Release;
+		};
+		AB777F0F277093050044DE68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4DUZKVXU2R;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Tas.TasMovieUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TasMovie;
+			};
+			name = Debug;
+		};
+		AB777F10277093050044DE68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4DUZKVXU2R;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Tas.TasMovieUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TasMovie;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AB777ED9277093040044DE68 /* Build configuration list for PBXProject "TasMovie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB777F06277093050044DE68 /* Debug */,
+				AB777F07277093050044DE68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB777F08277093050044DE68 /* Build configuration list for PBXNativeTarget "TasMovie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB777F09277093050044DE68 /* Debug */,
+				AB777F0A277093050044DE68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB777F0B277093050044DE68 /* Build configuration list for PBXNativeTarget "TasMovieTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB777F0C277093050044DE68 /* Debug */,
+				AB777F0D277093050044DE68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB777F0E277093050044DE68 /* Build configuration list for PBXNativeTarget "TasMovieUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB777F0F277093050044DE68 /* Debug */,
+				AB777F10277093050044DE68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AB777ED6277093040044DE68 /* Project object */;
+}

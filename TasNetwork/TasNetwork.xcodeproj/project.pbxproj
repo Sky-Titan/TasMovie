@@ -7,36 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AB94D75E2764C4E50026B2E6 /* SpinWheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB94D75D2764C4E50026B2E6 /* SpinWheelView.swift */; };
-		ABB7ACC62760D23B009B0AC1 /* AnchorPointPracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB7ACC52760D23B009B0AC1 /* AnchorPointPracticeView.swift */; };
-		ABFE06DE275C9819001DC24D /* TasExample.docc in Sources */ = {isa = PBXBuildFile; fileRef = ABFE06DD275C9819001DC24D /* TasExample.docc */; };
-		ABFE06E4275C9819001DC24D /* TasExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABFE06D9275C9819001DC24D /* TasExample.framework */; };
-		ABFE06E9275C9819001DC24D /* TasExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFE06E8275C9819001DC24D /* TasExampleTests.swift */; };
-		ABFE06EA275C9819001DC24D /* TasExample.h in Headers */ = {isa = PBXBuildFile; fileRef = ABFE06DC275C9819001DC24D /* TasExample.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ABFE06F6275C9853001DC24D /* DragDotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFE06F5275C9853001DC24D /* DragDotView.swift */; };
-		ABFE06FC275C9B5F001DC24D /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFE06FB275C9B5F001DC24D /* CircleProgressView.swift */; };
-		ABFE06FF275C9E60001DC24D /* TasUtility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABFE06FE275C9E60001DC24D /* TasUtility.framework */; };
-		ABFE0700275C9E60001DC24D /* TasUtility.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ABFE06FE275C9E60001DC24D /* TasUtility.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AB9D03AC2771E3E000BE4244 /* TasNetwork.docc in Sources */ = {isa = PBXBuildFile; fileRef = AB9D03AB2771E3E000BE4244 /* TasNetwork.docc */; };
+		AB9D03B22771E3E000BE4244 /* TasNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9D03A72771E3E000BE4244 /* TasNetwork.framework */; };
+		AB9D03B72771E3E000BE4244 /* TasNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D03B62771E3E000BE4244 /* TasNetworkTests.swift */; };
+		AB9D03B82771E3E000BE4244 /* TasNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = AB9D03AA2771E3E000BE4244 /* TasNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB9D03C42771E3F700BE4244 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D03C32771E3F700BE4244 /* DataProvider.swift */; };
+		AB9D03C72771E42700BE4244 /* MyLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = AB9D03C62771E42700BE4244 /* MyLibrary */; };
+		AB9D03C92771E56D00BE4244 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D03C82771E56D00BE4244 /* NetworkManager.swift */; };
+		AB9D03CB2771EA2000BE4244 /* TasUtility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9D03CA2771EA2000BE4244 /* TasUtility.framework */; };
+		AB9D03CC2771EA2000BE4244 /* TasUtility.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AB9D03CA2771EA2000BE4244 /* TasUtility.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AB9D03CF2771F0B400BE4244 /* Dictionary+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D03CE2771F0B400BE4244 /* Dictionary+.swift */; };
+		AB9D03DB2771F77500BE4244 /* DictionaryMappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D03DA2771F77500BE4244 /* DictionaryMappingTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		ABFE06E5275C9819001DC24D /* PBXContainerItemProxy */ = {
+		AB9D03B32771E3E000BE4244 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = ABFE06D0275C9819001DC24D /* Project object */;
+			containerPortal = AB9D039E2771E3E000BE4244 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = ABFE06D8275C9819001DC24D;
-			remoteInfo = TasExample;
+			remoteGlobalIDString = AB9D03A62771E3E000BE4244;
+			remoteInfo = TasNetwork;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		ABFE0701275C9E60001DC24D /* Embed Frameworks */ = {
+		AB9D03CD2771EA2000BE4244 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				ABFE0700275C9E60001DC24D /* TasUtility.framework in Embed Frameworks */,
+				AB9D03CC2771EA2000BE4244 /* TasUtility.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -44,82 +45,83 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		AB94D75D2764C4E50026B2E6 /* SpinWheelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinWheelView.swift; sourceTree = "<group>"; };
-		ABB7ACC52760D23B009B0AC1 /* AnchorPointPracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorPointPracticeView.swift; sourceTree = "<group>"; };
-		ABFE06D9275C9819001DC24D /* TasExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TasExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ABFE06DC275C9819001DC24D /* TasExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TasExample.h; sourceTree = "<group>"; };
-		ABFE06DD275C9819001DC24D /* TasExample.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = TasExample.docc; sourceTree = "<group>"; };
-		ABFE06E3275C9819001DC24D /* TasExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TasExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		ABFE06E8275C9819001DC24D /* TasExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasExampleTests.swift; sourceTree = "<group>"; };
-		ABFE06F5275C9853001DC24D /* DragDotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragDotView.swift; sourceTree = "<group>"; };
-		ABFE06FB275C9B5F001DC24D /* CircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
-		ABFE06FE275C9E60001DC24D /* TasUtility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TasUtility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB9D03A72771E3E000BE4244 /* TasNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TasNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB9D03AA2771E3E000BE4244 /* TasNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TasNetwork.h; sourceTree = "<group>"; };
+		AB9D03AB2771E3E000BE4244 /* TasNetwork.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = TasNetwork.docc; sourceTree = "<group>"; };
+		AB9D03B12771E3E000BE4244 /* TasNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TasNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB9D03B62771E3E000BE4244 /* TasNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasNetworkTests.swift; sourceTree = "<group>"; };
+		AB9D03C32771E3F700BE4244 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		AB9D03C82771E56D00BE4244 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		AB9D03CA2771EA2000BE4244 /* TasUtility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TasUtility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB9D03CE2771F0B400BE4244 /* Dictionary+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+.swift"; sourceTree = "<group>"; };
+		AB9D03DA2771F77500BE4244 /* DictionaryMappingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryMappingTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		ABFE06D6275C9819001DC24D /* Frameworks */ = {
+		AB9D03A42771E3E000BE4244 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABFE06FF275C9E60001DC24D /* TasUtility.framework in Frameworks */,
+				AB9D03CB2771EA2000BE4244 /* TasUtility.framework in Frameworks */,
+				AB9D03C72771E42700BE4244 /* MyLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ABFE06E0275C9819001DC24D /* Frameworks */ = {
+		AB9D03AE2771E3E000BE4244 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABFE06E4275C9819001DC24D /* TasExample.framework in Frameworks */,
+				AB9D03B22771E3E000BE4244 /* TasNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		ABFE06CF275C9819001DC24D = {
+		AB9D039D2771E3E000BE4244 = {
 			isa = PBXGroup;
 			children = (
-				ABFE06DB275C9819001DC24D /* TasExample */,
-				ABFE06E7275C9819001DC24D /* TasExampleTests */,
-				ABFE06DA275C9819001DC24D /* Products */,
-				ABFE06FD275C9E60001DC24D /* Frameworks */,
+				AB9D03A92771E3E000BE4244 /* TasNetwork */,
+				AB9D03B52771E3E000BE4244 /* TasNetworkTests */,
+				AB9D03A82771E3E000BE4244 /* Products */,
+				AB9D03C52771E42700BE4244 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		ABFE06DA275C9819001DC24D /* Products */ = {
+		AB9D03A82771E3E000BE4244 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ABFE06D9275C9819001DC24D /* TasExample.framework */,
-				ABFE06E3275C9819001DC24D /* TasExampleTests.xctest */,
+				AB9D03A72771E3E000BE4244 /* TasNetwork.framework */,
+				AB9D03B12771E3E000BE4244 /* TasNetworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		ABFE06DB275C9819001DC24D /* TasExample */ = {
+		AB9D03A92771E3E000BE4244 /* TasNetwork */ = {
 			isa = PBXGroup;
 			children = (
-				ABFE06DC275C9819001DC24D /* TasExample.h */,
-				ABFE06DD275C9819001DC24D /* TasExample.docc */,
-				ABFE06FB275C9B5F001DC24D /* CircleProgressView.swift */,
-				ABFE06F5275C9853001DC24D /* DragDotView.swift */,
-				ABB7ACC52760D23B009B0AC1 /* AnchorPointPracticeView.swift */,
-				AB94D75D2764C4E50026B2E6 /* SpinWheelView.swift */,
+				AB9D03AA2771E3E000BE4244 /* TasNetwork.h */,
+				AB9D03AB2771E3E000BE4244 /* TasNetwork.docc */,
+				AB9D03C32771E3F700BE4244 /* DataProvider.swift */,
+				AB9D03C82771E56D00BE4244 /* NetworkManager.swift */,
+				AB9D03CE2771F0B400BE4244 /* Dictionary+.swift */,
 			);
-			path = TasExample;
+			path = TasNetwork;
 			sourceTree = "<group>";
 		};
-		ABFE06E7275C9819001DC24D /* TasExampleTests */ = {
+		AB9D03B52771E3E000BE4244 /* TasNetworkTests */ = {
 			isa = PBXGroup;
 			children = (
-				ABFE06E8275C9819001DC24D /* TasExampleTests.swift */,
+				AB9D03B62771E3E000BE4244 /* TasNetworkTests.swift */,
+				AB9D03DA2771F77500BE4244 /* DictionaryMappingTests.swift */,
 			);
-			path = TasExampleTests;
+			path = TasNetworkTests;
 			sourceTree = "<group>";
 		};
-		ABFE06FD275C9E60001DC24D /* Frameworks */ = {
+		AB9D03C52771E42700BE4244 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				ABFE06FE275C9E60001DC24D /* TasUtility.framework */,
+				AB9D03CA2771EA2000BE4244 /* TasUtility.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -127,73 +129,76 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		ABFE06D4275C9819001DC24D /* Headers */ = {
+		AB9D03A22771E3E000BE4244 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABFE06EA275C9819001DC24D /* TasExample.h in Headers */,
+				AB9D03B82771E3E000BE4244 /* TasNetwork.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		ABFE06D8275C9819001DC24D /* TasExample */ = {
+		AB9D03A62771E3E000BE4244 /* TasNetwork */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ABFE06ED275C9819001DC24D /* Build configuration list for PBXNativeTarget "TasExample" */;
+			buildConfigurationList = AB9D03BB2771E3E100BE4244 /* Build configuration list for PBXNativeTarget "TasNetwork" */;
 			buildPhases = (
-				ABFE06D4275C9819001DC24D /* Headers */,
-				ABFE06D5275C9819001DC24D /* Sources */,
-				ABFE06D6275C9819001DC24D /* Frameworks */,
-				ABFE06D7275C9819001DC24D /* Resources */,
-				ABFE0701275C9E60001DC24D /* Embed Frameworks */,
+				AB9D03A22771E3E000BE4244 /* Headers */,
+				AB9D03A32771E3E000BE4244 /* Sources */,
+				AB9D03A42771E3E000BE4244 /* Frameworks */,
+				AB9D03A52771E3E000BE4244 /* Resources */,
+				AB9D03CD2771EA2000BE4244 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = TasExample;
-			productName = TasExample;
-			productReference = ABFE06D9275C9819001DC24D /* TasExample.framework */;
+			name = TasNetwork;
+			packageProductDependencies = (
+				AB9D03C62771E42700BE4244 /* MyLibrary */,
+			);
+			productName = TasNetwork;
+			productReference = AB9D03A72771E3E000BE4244 /* TasNetwork.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		ABFE06E2275C9819001DC24D /* TasExampleTests */ = {
+		AB9D03B02771E3E000BE4244 /* TasNetworkTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ABFE06F0275C9819001DC24D /* Build configuration list for PBXNativeTarget "TasExampleTests" */;
+			buildConfigurationList = AB9D03BE2771E3E100BE4244 /* Build configuration list for PBXNativeTarget "TasNetworkTests" */;
 			buildPhases = (
-				ABFE06DF275C9819001DC24D /* Sources */,
-				ABFE06E0275C9819001DC24D /* Frameworks */,
-				ABFE06E1275C9819001DC24D /* Resources */,
+				AB9D03AD2771E3E000BE4244 /* Sources */,
+				AB9D03AE2771E3E000BE4244 /* Frameworks */,
+				AB9D03AF2771E3E000BE4244 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				ABFE06E6275C9819001DC24D /* PBXTargetDependency */,
+				AB9D03B42771E3E000BE4244 /* PBXTargetDependency */,
 			);
-			name = TasExampleTests;
-			productName = TasExampleTests;
-			productReference = ABFE06E3275C9819001DC24D /* TasExampleTests.xctest */;
+			name = TasNetworkTests;
+			productName = TasNetworkTests;
+			productReference = AB9D03B12771E3E000BE4244 /* TasNetworkTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		ABFE06D0275C9819001DC24D /* Project object */ = {
+		AB9D039E2771E3E000BE4244 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1310;
-				LastUpgradeCheck = 1310;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
 				TargetAttributes = {
-					ABFE06D8275C9819001DC24D = {
-						CreatedOnToolsVersion = 13.1;
+					AB9D03A62771E3E000BE4244 = {
+						CreatedOnToolsVersion = 13.2.1;
 					};
-					ABFE06E2275C9819001DC24D = {
-						CreatedOnToolsVersion = 13.1;
+					AB9D03B02771E3E000BE4244 = {
+						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
 			};
-			buildConfigurationList = ABFE06D3275C9819001DC24D /* Build configuration list for PBXProject "TasExample" */;
+			buildConfigurationList = AB9D03A12771E3E000BE4244 /* Build configuration list for PBXProject "TasNetwork" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -201,26 +206,26 @@
 				en,
 				Base,
 			);
-			mainGroup = ABFE06CF275C9819001DC24D;
-			productRefGroup = ABFE06DA275C9819001DC24D /* Products */;
+			mainGroup = AB9D039D2771E3E000BE4244;
+			productRefGroup = AB9D03A82771E3E000BE4244 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ABFE06D8275C9819001DC24D /* TasExample */,
-				ABFE06E2275C9819001DC24D /* TasExampleTests */,
+				AB9D03A62771E3E000BE4244 /* TasNetwork */,
+				AB9D03B02771E3E000BE4244 /* TasNetworkTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		ABFE06D7275C9819001DC24D /* Resources */ = {
+		AB9D03A52771E3E000BE4244 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ABFE06E1275C9819001DC24D /* Resources */ = {
+		AB9D03AF2771E3E000BE4244 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -230,38 +235,38 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		ABFE06D5275C9819001DC24D /* Sources */ = {
+		AB9D03A32771E3E000BE4244 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABFE06F6275C9853001DC24D /* DragDotView.swift in Sources */,
-				AB94D75E2764C4E50026B2E6 /* SpinWheelView.swift in Sources */,
-				ABFE06DE275C9819001DC24D /* TasExample.docc in Sources */,
-				ABFE06FC275C9B5F001DC24D /* CircleProgressView.swift in Sources */,
-				ABB7ACC62760D23B009B0AC1 /* AnchorPointPracticeView.swift in Sources */,
+				AB9D03C42771E3F700BE4244 /* DataProvider.swift in Sources */,
+				AB9D03CF2771F0B400BE4244 /* Dictionary+.swift in Sources */,
+				AB9D03C92771E56D00BE4244 /* NetworkManager.swift in Sources */,
+				AB9D03AC2771E3E000BE4244 /* TasNetwork.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ABFE06DF275C9819001DC24D /* Sources */ = {
+		AB9D03AD2771E3E000BE4244 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABFE06E9275C9819001DC24D /* TasExampleTests.swift in Sources */,
+				AB9D03DB2771F77500BE4244 /* DictionaryMappingTests.swift in Sources */,
+				AB9D03B72771E3E000BE4244 /* TasNetworkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		ABFE06E6275C9819001DC24D /* PBXTargetDependency */ = {
+		AB9D03B42771E3E000BE4244 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = ABFE06D8275C9819001DC24D /* TasExample */;
-			targetProxy = ABFE06E5275C9819001DC24D /* PBXContainerItemProxy */;
+			target = AB9D03A62771E3E000BE4244 /* TasNetwork */;
+			targetProxy = AB9D03B32771E3E000BE4244 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		ABFE06EB275C9819001DC24D /* Debug */ = {
+		AB9D03B92771E3E000BE4244 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -325,7 +330,7 @@
 			};
 			name = Debug;
 		};
-		ABFE06EC275C9819001DC24D /* Release */ = {
+		AB9D03BA2771E3E000BE4244 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -383,7 +388,7 @@
 			};
 			name = Release;
 		};
-		ABFE06EE275C9819001DC24D /* Debug */ = {
+		AB9D03BC2771E3E100BE4244 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -403,7 +408,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Tas.TasExample;
+				PRODUCT_BUNDLE_IDENTIFIER = Tas.TasNetwork;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -412,7 +417,7 @@
 			};
 			name = Debug;
 		};
-		ABFE06EF275C9819001DC24D /* Release */ = {
+		AB9D03BD2771E3E100BE4244 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -432,7 +437,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Tas.TasExample;
+				PRODUCT_BUNDLE_IDENTIFIER = Tas.TasNetwork;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -441,7 +446,7 @@
 			};
 			name = Release;
 		};
-		ABFE06F1275C9819001DC24D /* Debug */ = {
+		AB9D03BF2771E3E100BE4244 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -449,13 +454,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4DUZKVXU2R;
 				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Tas.TasExampleTests;
+				PRODUCT_BUNDLE_IDENTIFIER = Tas.TasNetworkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -463,7 +463,7 @@
 			};
 			name = Debug;
 		};
-		ABFE06F2275C9819001DC24D /* Release */ = {
+		AB9D03C02771E3E100BE4244 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -471,13 +471,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4DUZKVXU2R;
 				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Tas.TasExampleTests;
+				PRODUCT_BUNDLE_IDENTIFIER = Tas.TasNetworkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -488,34 +483,41 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ABFE06D3275C9819001DC24D /* Build configuration list for PBXProject "TasExample" */ = {
+		AB9D03A12771E3E000BE4244 /* Build configuration list for PBXProject "TasNetwork" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ABFE06EB275C9819001DC24D /* Debug */,
-				ABFE06EC275C9819001DC24D /* Release */,
+				AB9D03B92771E3E000BE4244 /* Debug */,
+				AB9D03BA2771E3E000BE4244 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ABFE06ED275C9819001DC24D /* Build configuration list for PBXNativeTarget "TasExample" */ = {
+		AB9D03BB2771E3E100BE4244 /* Build configuration list for PBXNativeTarget "TasNetwork" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ABFE06EE275C9819001DC24D /* Debug */,
-				ABFE06EF275C9819001DC24D /* Release */,
+				AB9D03BC2771E3E100BE4244 /* Debug */,
+				AB9D03BD2771E3E100BE4244 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ABFE06F0275C9819001DC24D /* Build configuration list for PBXNativeTarget "TasExampleTests" */ = {
+		AB9D03BE2771E3E100BE4244 /* Build configuration list for PBXNativeTarget "TasNetworkTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ABFE06F1275C9819001DC24D /* Debug */,
-				ABFE06F2275C9819001DC24D /* Release */,
+				AB9D03BF2771E3E100BE4244 /* Debug */,
+				AB9D03C02771E3E100BE4244 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AB9D03C62771E42700BE4244 /* MyLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MyLibrary;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = ABFE06D0275C9819001DC24D /* Project object */;
+	rootObject = AB9D039E2771E3E000BE4244 /* Project object */;
 }

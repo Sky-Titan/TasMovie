@@ -28,9 +28,9 @@
 		AB777F2B27709DBD0044DE68 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB777F2A27709DBD0044DE68 /* SecondViewController.xib */; };
 		AB777F2D27709F400044DE68 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB777F2C27709F400044DE68 /* ThirdViewController.swift */; };
 		AB777F2F27709F5C0044DE68 /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB777F2E27709F5C0044DE68 /* ThirdViewController.xib */; };
-		AB777F5F2770A4E30044DE68 /* TasPackage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB777F5E2770A4E30044DE68 /* TasPackage.framework */; };
-		AB777F602770A4E30044DE68 /* TasPackage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AB777F5E2770A4E30044DE68 /* TasPackage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AB777F622770A57D0044DE68 /* MyLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = AB777F612770A57D0044DE68 /* MyLibrary */; };
+		AB9D03D62771F46E00BE4244 /* NetworkConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D03D52771F46E00BE4244 /* NetworkConst.swift */; };
+		AB9D03D92771F59100BE4244 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D03D82771F59100BE4244 /* MovieModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +57,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				AB777F602770A4E30044DE68 /* TasPackage.framework in Embed Frameworks */,
 				AB777F18277093A40044DE68 /* TasExample.framework in Embed Frameworks */,
 				AB777F16277093A40044DE68 /* TasBase.framework in Embed Frameworks */,
 				AB777F1A277093A40044DE68 /* TasUtility.framework in Embed Frameworks */,
@@ -91,6 +90,8 @@
 		AB777F2C27709F400044DE68 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		AB777F2E27709F5C0044DE68 /* ThirdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdViewController.xib; sourceTree = "<group>"; };
 		AB777F5E2770A4E30044DE68 /* TasPackage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TasPackage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB9D03D52771F46E00BE4244 /* NetworkConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConst.swift; sourceTree = "<group>"; };
+		AB9D03D82771F59100BE4244 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +99,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB777F5F2770A4E30044DE68 /* TasPackage.framework in Frameworks */,
 				AB777F17277093A40044DE68 /* TasExample.framework in Frameworks */,
 				AB777F15277093A40044DE68 /* TasBase.framework in Frameworks */,
 				AB777F19277093A40044DE68 /* TasUtility.framework in Frameworks */,
@@ -202,6 +202,8 @@
 		AB777F20277097EA0044DE68 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				AB9D03D72771F58900BE4244 /* Model */,
+				AB9D03D42771F44400BE4244 /* Network */,
 				AB777F21277097EF0044DE68 /* TabBar */,
 			);
 			path = Common;
@@ -214,6 +216,22 @@
 				AB777F24277098220044DE68 /* TabBarView.xib */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		AB9D03D42771F44400BE4244 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AB9D03D52771F46E00BE4244 /* NetworkConst.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		AB9D03D72771F58900BE4244 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AB9D03D82771F59100BE4244 /* MovieModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,7 +376,9 @@
 				AB777EE2277093040044DE68 /* AppDelegate.swift in Sources */,
 				AB777F23277098000044DE68 /* TabBarView.swift in Sources */,
 				AB777F2927709D900044DE68 /* SecondViewController.swift in Sources */,
+				AB9D03D92771F59100BE4244 /* MovieModel.swift in Sources */,
 				AB777F2D27709F400044DE68 /* ThirdViewController.swift in Sources */,
+				AB9D03D62771F46E00BE4244 /* NetworkConst.swift in Sources */,
 				AB777EE4277093040044DE68 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -458,7 +478,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -513,7 +533,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

@@ -16,3 +16,8 @@ extension Collection {
         return indices.contains(index) ? self[index] : nil
     }
 }
+extension Dictionary {
+    public subscript(safe index: Index) -> Element? {
+        return indices.contains(index) ? self[index] : nil
+    }
+}

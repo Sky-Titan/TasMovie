@@ -24,10 +24,26 @@ extension Dictionary where Key == String, Value == Any {
         return self[itemKey] as? Bool
     }
     
-    public func object<MappingType: BaseJSONMappable>(itemKey: String, itemType: MappingType.Type) -> MappingType? {
+    public func object<MappingType: BaseJSONMappable>(itemKey: String, objectType: MappingType.Type) -> MappingType? {
         if let dict = self[itemKey] as? [String: Any] {
             return MappingType(from: dict)
         }
         return nil
+    }
+    
+    public func array<MappingType: BaseJSONMappable>(itemKey: String, objectType: MappingType.Type) -> [MappingType] {
+        if let array = self[itemKey] as? [[String: Any]] {
+            return array.map {
+                return MappingType(from: $0)
+            }
+        }
+        return []
+    }
+    
+    public func array<MappingType>(itemKey: String, itemType: MappingType.Type) -> [MappingType] {
+        if let arr = self[itemKey] as? [MappingType] {
+            return arr
+        }
+        return []
     }
 }

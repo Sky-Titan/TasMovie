@@ -51,7 +51,11 @@ class MovieModel: BaseJSONMappable {
     
     
     required init(from json: [String : Any]) {
-        
+        poster_path = json.string(itemKey: "poster_path") ?? ""
+        adult = json.bool(itemKey: "adult") ?? false
+        overview = json.string(itemKey: "overview") ?? ""
+        release_date = json.string(itemKey: "release_date") ?? ""
+        genre_ids = json
     }
     
     

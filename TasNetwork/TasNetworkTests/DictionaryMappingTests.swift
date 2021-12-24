@@ -44,19 +44,46 @@ class DictionaryMappingTests: XCTestCase {
         let object: [String: Any] = ["name": "park", "age": 15, "height": 175.5, "isAdult": true]
         let json: [String: Any] = ["information": object]
         
-        let information = json.object(itemKey: "information", itemType: TestInformationModel.self)
+        let information = json.object(itemKey: "information", objectType: TestInformationModel.self)
         XCTAssert(information != nil)
         XCTAssert(information?.name == "park")
         XCTAssert(information?.age == 15)
         XCTAssert(information?.height == 175.5)
         XCTAssert(information?.isAdult == true)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testArrayExample() throws {
+        let array: [Int] = [0, 1, 2, 3]
+        let json: [String: Any] = ["array": array]
+        
+        let result = json.array(itemKey: "array", itemType: Int.self)
+        XCTAssert(result.isNotEmpty)
+        XCTAssert(result[safe: 0] == 0)
+        XCTAssert(result[safe: 1] == 1)
+        XCTAssert(result[safe: 2] == 2)
+        XCTAssert(result[safe: 3] == 3)
+    }
+    
+    func testObjectArrayExample() throws {
+        let object: [String: Any] = ["name": "park", "age": 15, "height": 175.5, "isAdult": true]
+        let object2: [String: Any] = ["name": "kim", "age": 17, "height": 176.5, "isAdult": false]
+        
+        let array: [[String: Any]] = [object, object2]
+        let json: [String: Any] = ["array": array]
+        
+        let result = json.array(itemKey: "array", objectType: TestInformationModel.self)
+        XCTAssert(result.isNotEmpty)
+        let information1 = result[safe: 0]
+        XCTAssert(information1?.name == "park")
+        XCTAssert(information1?.age == 15)
+        XCTAssert(information1?.height == 175.5)
+        XCTAssert(information1?.isAdult == true)
+        
+        let information2 = result[safe: 1]
+        XCTAssert(information2?.name == "kim")
+        XCTAssert(information2?.age == 17)
+        XCTAssert(information2?.height == 176.5)
+        XCTAssert(information2?.isAdult == false)
     }
 
 }

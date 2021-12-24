@@ -10,7 +10,7 @@ import UIKit
 open class BaseTableView: UITableView, BaseListViewProtocol {
     
     public var viewModel: BaseListViewModel?
-    
+    public var scrollDelegate: UIScrollViewDelegate?
     public override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
         doInit()
@@ -44,7 +44,9 @@ extension BaseTableView: BaseListViewModelDelegate {
 }
 
 extension BaseTableView: UITableViewDataSource, UITableViewDelegate {
-    
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        self.scrollDelegate?.scrollViewDidScroll?(scrollView)
+    }
     public func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         return true
     }
@@ -131,9 +133,21 @@ public class FrontSection {
     public var headerViewModel: FrontViewModelProtocol?
     public var footerViewModel: FrontViewModelProtocol?
     public var cellViewModels: [FrontViewModelProtocol] = []
-    
+    public var sectionHeight: CGFloat {
+        return (headerViewModel?.frontViewProperty.cellSize.height ?? 0) + (footerViewModel?.frontViewProperty.cellSize.height ?? 0) + cellViewModels.reduce(CGFloat(0)) { result, item in
+            return result + item.frontViewProperty.cellSize.height
+        }
+    }
     public init() {
         
+    }
+}
+
+extension Array where Element == FrontSection {
+    public var listHeight: CGFloat {
+        return self.reduce(CGFloat(0), {
+            return $0 + $1.sectionHeight
+        })
     }
 }
 

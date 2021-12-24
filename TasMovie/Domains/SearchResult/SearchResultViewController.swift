@@ -24,6 +24,7 @@ class SearchResultViewController: TSViewController, SearchDataProvider, RequestF
         tabBarHeight.constant = TabBarView.Const.height
         
         tableView.viewModel = listViewModel
+        tableView.scrollDelegate = self
         
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
@@ -62,5 +63,14 @@ extension SearchResultViewController: UISearchBarDelegate {
     
     func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
         return true
+    }
+}
+
+extension SearchResultViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if tableView.contentOffset.y + tableView.frame.size.height >= tableView.contentSize.height {
+            listViewModel.getNextPage()
+        }
     }
 }

@@ -7,16 +7,22 @@
 
 import UIKit
 
-public class BaseTableHeaderFooterView: UITableViewHeaderFooterView, BaseListCellViewProtocol {
+class BaseTableHeaderFooterView: UITableViewHeaderFooterView, BaseListCellViewProtocol {
     
     var frontView: UIView?
     
-    public override init(reuseIdentifier: String?) {
+    override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        frontView?.removeFromSuperview()
+        frontView = nil
     }
     
 }

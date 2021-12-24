@@ -8,6 +8,7 @@
 import Foundation
 import TasUtility
 import Alamofire
+import CoreData
 
 public enum APIResult<ResponseT: BaseJSONMappable> {
     case success(ResponseT)
@@ -18,29 +19,47 @@ public protocol BaseJSONMappable: AnyObject {
     init(from json: [String: Any])
 }
 
+public class APIRequest {
+    
+    private let request: DataRequest
+    
+    public init(request: DataRequest) {
+        self.request = request
+    }
+    
+    public func send<ResultType: BaseJSONMappable>(completion: @escaping(APIResult<ResultType>) -> Void) {
+        request.validate(statusCode: 200..<500)
+            .responseString(completionHandler: { response in
+                if let jsonString = response.value, let jsonDict = jsonString.convertToDictionary() {
+                    if response.error == nil {
+                        completion(.success(ResultType(from: jsonDict)))
+                    } else {
+                        completion(.failure)
+                    }
+                }
+            })
+    }
+}
+
 public class NetworkManager {
     public static let shared = NetworkManager()
     
     private init() {}
 
-    public func requestAPI<ResultType: BaseJSONMappable>(url: String, with method: HTTPMethod, params: [String: String], resultType: ResultType.Type, completionHandler: @escaping (APIResult<ResultType>) -> Void) {
-        AF.request(url, method: method, parameters: params, encoding: URLEncoding.default, headers: getHeaders(), interceptor: nil, requestModifier: nil)
-            .validate(statusCode: 200..<500)
-            .responseDecodable(of: String.self) { response in
-                if let jsonString = response.value, let jsonDict = jsonString.convertToDictionary() {
-                    if response.error == nil {
-                        completionHandler(.success(ResultType(from: jsonDict)))
-                    } else {
-                        completionHandler(.failure)
-                    }
-                }
-            }
+    public func requestAPI(url: String, with method: APIMethod, headers: [String: String], params: [String: String] = [:]) -> APIRequest {
+        let dataRequest = AF.request(url, method: HTTPMethod(rawValue: method.rawValue), parameters: params, encoding: URLEncoding.default, headers: HTTPHeaders(headers), interceptor: nil, requestModifier: nil)
+        return APIRequest(request: dataRequest)
     }
-    
-    private func getHeaders() -> HTTPHeaders {
-        var headers: HTTPHeaders = [:]
-        headers["Content-Type"] = "application/json"
-        headers["Accept"] = "application/json"
-        return headers
-    }
+}
+
+public enum APIMethod: String {
+    case connect = "CONNECT"
+    case delete = "DELETE"
+    case get = "GET"
+    case head = "HEAD"
+    case options = "OPTIONS"
+    case patch = "PATCH"
+    case post = "POST"
+    case put = "PUT"
+    case trace = "TRACE"
 }

@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: scene)
         let rootVC = UITabBarController()
-        let viewControllerList: [UIViewController] = [FirstViewController(), SecondViewController(), ThirdViewController()]
+        let viewControllerList: [UIViewController] = [SearchResultViewController(), SecondViewController(), ThirdViewController()]
         rootVC.setViewControllers(viewControllerList.map{
             let navVC = UINavigationController(rootViewController: $0)
             navVC.navigationBar.isHidden = true

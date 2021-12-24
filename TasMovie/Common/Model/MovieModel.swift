@@ -49,13 +49,25 @@ class MovieModel: BaseJSONMappable {
     var video: Bool
     var vote_average: Double
     
+    convenience init() {
+        self.init(from: [:])
+    }
     
     required init(from json: [String : Any]) {
         poster_path = json.string(itemKey: "poster_path") ?? ""
         adult = json.bool(itemKey: "adult") ?? false
         overview = json.string(itemKey: "overview") ?? ""
         release_date = json.string(itemKey: "release_date") ?? ""
-        genre_ids = json
+        genre_ids = json.array(itemKey: "genre_ids", itemType: Int.self)
+        id = json.integer(itemKey: "id") ?? 0
+        original_title = json.string(itemKey: "original_title") ?? ""
+        original_language = json.string(itemKey: "original_language") ?? ""
+        title = json.string(itemKey: "title") ?? ""
+        backdrop_path = json.string(itemKey: "backdrop_path") ?? ""
+        popularity = json.double(itemKey: "popularity") ?? 0
+        vote_count = json.integer(itemKey: "vote_count") ?? 0
+        video = json.bool(itemKey: "video") ?? false
+        vote_average = json.double(itemKey: "vote_average") ?? 0
     }
     
     

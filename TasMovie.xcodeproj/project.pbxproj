@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		AB777EE2277093040044DE68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB777EE1277093040044DE68 /* AppDelegate.swift */; };
 		AB777EE4277093040044DE68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB777EE3277093040044DE68 /* SceneDelegate.swift */; };
-		AB777EE6277093040044DE68 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB777EE5277093040044DE68 /* FirstViewController.swift */; };
+		AB777EE6277093040044DE68 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB777EE5277093040044DE68 /* SearchResultViewController.swift */; };
 		AB777EEB277093040044DE68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB777EEA277093040044DE68 /* Assets.xcassets */; };
 		AB777EEE277093040044DE68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB777EEC277093040044DE68 /* LaunchScreen.storyboard */; };
 		AB777EF9277093050044DE68 /* TasMovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB777EF8277093050044DE68 /* TasMovieTests.swift */; };
@@ -21,16 +21,25 @@
 		AB777F18277093A40044DE68 /* TasExample.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AB777F13277093A40044DE68 /* TasExample.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AB777F19277093A40044DE68 /* TasUtility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB777F14277093A40044DE68 /* TasUtility.framework */; };
 		AB777F1A277093A40044DE68 /* TasUtility.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AB777F14277093A40044DE68 /* TasUtility.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		AB777F1D277093ED0044DE68 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB777F1C277093ED0044DE68 /* FirstViewController.xib */; };
+		AB777F1D277093ED0044DE68 /* SearchResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB777F1C277093ED0044DE68 /* SearchResultViewController.xib */; };
 		AB777F23277098000044DE68 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB777F22277098000044DE68 /* TabBarView.swift */; };
 		AB777F25277098220044DE68 /* TabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB777F24277098220044DE68 /* TabBarView.xib */; };
 		AB777F2927709D900044DE68 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB777F2827709D900044DE68 /* SecondViewController.swift */; };
 		AB777F2B27709DBD0044DE68 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB777F2A27709DBD0044DE68 /* SecondViewController.xib */; };
 		AB777F2D27709F400044DE68 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB777F2C27709F400044DE68 /* ThirdViewController.swift */; };
 		AB777F2F27709F5C0044DE68 /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB777F2E27709F5C0044DE68 /* ThirdViewController.xib */; };
-		AB777F622770A57D0044DE68 /* MyLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = AB777F612770A57D0044DE68 /* MyLibrary */; };
+		AB98B2682775B971003C1F8E /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = AB98B2672775B971003C1F8E /* SDWebImage */; };
 		AB9D03D62771F46E00BE4244 /* NetworkConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D03D52771F46E00BE4244 /* NetworkConst.swift */; };
 		AB9D03D92771F59100BE4244 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D03D82771F59100BE4244 /* MovieModel.swift */; };
+		ABB67C6127758A6100498DED /* SearchDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB67C6027758A6100498DED /* SearchDataProvider.swift */; };
+		ABB67C6327758DF500498DED /* SearchResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB67C6227758DF500498DED /* SearchResultModel.swift */; };
+		ABB67C652775901E00498DED /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB67C642775901E00498DED /* API.swift */; };
+		ABB67C7327759BB500498DED /* TasNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB67C7227759BB500498DED /* TasNetwork.framework */; };
+		ABB67C7427759BB500498DED /* TasNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ABB67C7227759BB500498DED /* TasNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ABCE18462775A55C002B3C56 /* SearchResultListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCE18452775A55C002B3C56 /* SearchResultListViewModel.swift */; };
+		ABCE18492775A77A002B3C56 /* SearchResultItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCE18482775A77A002B3C56 /* SearchResultItemView.swift */; };
+		ABCE184B2775A7A5002B3C56 /* SearchResultItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABCE184A2775A7A5002B3C56 /* SearchResultItemView.xib */; };
+		ABCE184D2775AEE5002B3C56 /* SearchResultItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCE184C2775AEE5002B3C56 /* SearchResultItemViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +68,7 @@
 			files = (
 				AB777F18277093A40044DE68 /* TasExample.framework in Embed Frameworks */,
 				AB777F16277093A40044DE68 /* TasBase.framework in Embed Frameworks */,
+				ABB67C7427759BB500498DED /* TasNetwork.framework in Embed Frameworks */,
 				AB777F1A277093A40044DE68 /* TasUtility.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -70,7 +80,7 @@
 		AB777EDE277093040044DE68 /* TasMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TasMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB777EE1277093040044DE68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB777EE3277093040044DE68 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AB777EE5277093040044DE68 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		AB777EE5277093040044DE68 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		AB777EEA277093040044DE68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB777EED277093040044DE68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB777EEF277093040044DE68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -82,16 +92,23 @@
 		AB777F12277093A40044DE68 /* TasBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TasBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB777F13277093A40044DE68 /* TasExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TasExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB777F14277093A40044DE68 /* TasUtility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TasUtility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB777F1C277093ED0044DE68 /* FirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
+		AB777F1C277093ED0044DE68 /* SearchResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultViewController.xib; sourceTree = "<group>"; };
 		AB777F22277098000044DE68 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		AB777F24277098220044DE68 /* TabBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarView.xib; sourceTree = "<group>"; };
 		AB777F2827709D900044DE68 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		AB777F2A27709DBD0044DE68 /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 		AB777F2C27709F400044DE68 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		AB777F2E27709F5C0044DE68 /* ThirdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdViewController.xib; sourceTree = "<group>"; };
-		AB777F5E2770A4E30044DE68 /* TasPackage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TasPackage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB9D03D52771F46E00BE4244 /* NetworkConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConst.swift; sourceTree = "<group>"; };
 		AB9D03D82771F59100BE4244 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		ABB67C6027758A6100498DED /* SearchDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataProvider.swift; sourceTree = "<group>"; };
+		ABB67C6227758DF500498DED /* SearchResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultModel.swift; sourceTree = "<group>"; };
+		ABB67C642775901E00498DED /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		ABB67C7227759BB500498DED /* TasNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TasNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABCE18452775A55C002B3C56 /* SearchResultListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultListViewModel.swift; sourceTree = "<group>"; };
+		ABCE18482775A77A002B3C56 /* SearchResultItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultItemView.swift; sourceTree = "<group>"; };
+		ABCE184A2775A7A5002B3C56 /* SearchResultItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultItemView.xib; sourceTree = "<group>"; };
+		ABCE184C2775AEE5002B3C56 /* SearchResultItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultItemViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +117,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB777F17277093A40044DE68 /* TasExample.framework in Frameworks */,
+				ABB67C7327759BB500498DED /* TasNetwork.framework in Frameworks */,
 				AB777F15277093A40044DE68 /* TasBase.framework in Frameworks */,
 				AB777F19277093A40044DE68 /* TasUtility.framework in Frameworks */,
-				AB777F622770A57D0044DE68 /* MyLibrary in Frameworks */,
+				AB98B2682775B971003C1F8E /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,7 +196,7 @@
 		AB777F11277093A30044DE68 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AB777F5E2770A4E30044DE68 /* TasPackage.framework */,
+				ABB67C7227759BB500498DED /* TasNetwork.framework */,
 				AB777F12277093A40044DE68 /* TasBase.framework */,
 				AB777F13277093A40044DE68 /* TasExample.framework */,
 				AB777F14277093A40044DE68 /* TasUtility.framework */,
@@ -189,8 +207,7 @@
 		AB777F1E277095080044DE68 /* Domains */ = {
 			isa = PBXGroup;
 			children = (
-				AB777EE5277093040044DE68 /* FirstViewController.swift */,
-				AB777F1C277093ED0044DE68 /* FirstViewController.xib */,
+				ABCE18432775A4AB002B3C56 /* SearchResult */,
 				AB777F2827709D900044DE68 /* SecondViewController.swift */,
 				AB777F2A27709DBD0044DE68 /* SecondViewController.xib */,
 				AB777F2C27709F400044DE68 /* ThirdViewController.swift */,
@@ -222,6 +239,8 @@
 			isa = PBXGroup;
 			children = (
 				AB9D03D52771F46E00BE4244 /* NetworkConst.swift */,
+				ABB67C6027758A6100498DED /* SearchDataProvider.swift */,
+				ABB67C642775901E00498DED /* API.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -230,8 +249,38 @@
 			isa = PBXGroup;
 			children = (
 				AB9D03D82771F59100BE4244 /* MovieModel.swift */,
+				ABB67C6227758DF500498DED /* SearchResultModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		ABCE18432775A4AB002B3C56 /* SearchResult */ = {
+			isa = PBXGroup;
+			children = (
+				ABCE18472775A760002B3C56 /* View */,
+				ABCE18442775A54D002B3C56 /* ViewModel */,
+				AB777EE5277093040044DE68 /* SearchResultViewController.swift */,
+				AB777F1C277093ED0044DE68 /* SearchResultViewController.xib */,
+			);
+			path = SearchResult;
+			sourceTree = "<group>";
+		};
+		ABCE18442775A54D002B3C56 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ABCE18452775A55C002B3C56 /* SearchResultListViewModel.swift */,
+				ABCE184C2775AEE5002B3C56 /* SearchResultItemViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ABCE18472775A760002B3C56 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ABCE18482775A77A002B3C56 /* SearchResultItemView.swift */,
+				ABCE184A2775A7A5002B3C56 /* SearchResultItemView.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,7 +301,7 @@
 			);
 			name = TasMovie;
 			packageProductDependencies = (
-				AB777F612770A57D0044DE68 /* MyLibrary */,
+				AB98B2672775B971003C1F8E /* SDWebImage */,
 			);
 			productName = TasMovie;
 			productReference = AB777EDE277093040044DE68 /* TasMovie.app */;
@@ -326,6 +375,9 @@
 				Base,
 			);
 			mainGroup = AB777ED5277093040044DE68;
+			packageReferences = (
+				AB98B2662775B971003C1F8E /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = AB777EDF277093040044DE68 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -345,8 +397,9 @@
 				AB777EEE277093040044DE68 /* LaunchScreen.storyboard in Resources */,
 				AB777EEB277093040044DE68 /* Assets.xcassets in Resources */,
 				AB777F2F27709F5C0044DE68 /* ThirdViewController.xib in Resources */,
+				ABCE184B2775A7A5002B3C56 /* SearchResultItemView.xib in Resources */,
 				AB777F25277098220044DE68 /* TabBarView.xib in Resources */,
-				AB777F1D277093ED0044DE68 /* FirstViewController.xib in Resources */,
+				AB777F1D277093ED0044DE68 /* SearchResultViewController.xib in Resources */,
 				AB777F2B27709DBD0044DE68 /* SecondViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,10 +425,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB777EE6277093040044DE68 /* FirstViewController.swift in Sources */,
+				ABB67C652775901E00498DED /* API.swift in Sources */,
+				AB777EE6277093040044DE68 /* SearchResultViewController.swift in Sources */,
 				AB777EE2277093040044DE68 /* AppDelegate.swift in Sources */,
 				AB777F23277098000044DE68 /* TabBarView.swift in Sources */,
 				AB777F2927709D900044DE68 /* SecondViewController.swift in Sources */,
+				ABCE18492775A77A002B3C56 /* SearchResultItemView.swift in Sources */,
+				ABB67C6327758DF500498DED /* SearchResultModel.swift in Sources */,
+				ABB67C6127758A6100498DED /* SearchDataProvider.swift in Sources */,
+				ABCE184D2775AEE5002B3C56 /* SearchResultItemViewModel.swift in Sources */,
+				ABCE18462775A55C002B3C56 /* SearchResultListViewModel.swift in Sources */,
 				AB9D03D92771F59100BE4244 /* MovieModel.swift in Sources */,
 				AB777F2D27709F400044DE68 /* ThirdViewController.swift in Sources */,
 				AB9D03D62771F46E00BE4244 /* NetworkConst.swift in Sources */,
@@ -718,10 +777,22 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		AB98B2662775B971003C1F8E /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
-		AB777F612770A57D0044DE68 /* MyLibrary */ = {
+		AB98B2672775B971003C1F8E /* SDWebImage */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = MyLibrary;
+			package = AB98B2662775B971003C1F8E /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

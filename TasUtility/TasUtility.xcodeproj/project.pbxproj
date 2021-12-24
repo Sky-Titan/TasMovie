@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AB3318F427633C1F00B297F3 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3318F327633C1F00B297F3 /* UIView+.swift */; };
 		AB777F2727709B910044DE68 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB777F2627709B910044DE68 /* UIColor+.swift */; };
+		ABB67C69277598FF00498DED /* Dictionary+append.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB67C68277598FF00498DED /* Dictionary+append.swift */; };
 		ABBAF5F72754E56F00DF17C3 /* TasUtility.docc in Sources */ = {isa = PBXBuildFile; fileRef = ABBAF5F62754E56F00DF17C3 /* TasUtility.docc */; };
 		ABBAF5FD2754E56F00DF17C3 /* TasUtility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABBAF5F22754E56F00DF17C3 /* TasUtility.framework */; };
 		ABBAF6022754E56F00DF17C3 /* TasUtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBAF6012754E56F00DF17C3 /* TasUtilityTests.swift */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		AB3318F327633C1F00B297F3 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		AB777F2627709B910044DE68 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		ABB67C68277598FF00498DED /* Dictionary+append.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+append.swift"; sourceTree = "<group>"; };
 		ABBAF5F22754E56F00DF17C3 /* TasUtility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TasUtility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABBAF5F52754E56F00DF17C3 /* TasUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TasUtility.h; sourceTree = "<group>"; };
 		ABBAF5F62754E56F00DF17C3 /* TasUtility.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = TasUtility.docc; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				ABC9A0DC275645FE002B3C3C /* ScreenUtility.swift */,
 				AB3318F327633C1F00B297F3 /* UIView+.swift */,
 				AB777F2627709B910044DE68 /* UIColor+.swift */,
+				ABB67C68277598FF00498DED /* Dictionary+append.swift */,
 			);
 			path = TasUtility;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				AB3318F427633C1F00B297F3 /* UIView+.swift in Sources */,
 				ABBAF5F72754E56F00DF17C3 /* TasUtility.docc in Sources */,
 				ABBAF6112754E7D000DF17C3 /* Collection+.swift in Sources */,
+				ABB67C69277598FF00498DED /* Dictionary+append.swift in Sources */,
 				ABFE06CC275C8D1F001DC24D /* CGFloat+.swift in Sources */,
 				ABC9A0DD275645FE002B3C3C /* ScreenUtility.swift in Sources */,
 			);

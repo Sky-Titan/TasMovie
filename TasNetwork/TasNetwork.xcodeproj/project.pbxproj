@@ -18,6 +18,7 @@
 		AB9D03CC2771EA2000BE4244 /* TasUtility.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AB9D03CA2771EA2000BE4244 /* TasUtility.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AB9D03CF2771F0B400BE4244 /* Dictionary+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D03CE2771F0B400BE4244 /* Dictionary+.swift */; };
 		AB9D03DB2771F77500BE4244 /* DictionaryMappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D03DA2771F77500BE4244 /* DictionaryMappingTests.swift */; };
+		ABCE184F2775B539002B3C56 /* RequestFinishedDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCE184E2775B539002B3C56 /* RequestFinishedDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		AB9D03CA2771EA2000BE4244 /* TasUtility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TasUtility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB9D03CE2771F0B400BE4244 /* Dictionary+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+.swift"; sourceTree = "<group>"; };
 		AB9D03DA2771F77500BE4244 /* DictionaryMappingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryMappingTests.swift; sourceTree = "<group>"; };
+		ABCE184E2775B539002B3C56 /* RequestFinishedDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFinishedDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				AB9D03C32771E3F700BE4244 /* DataProvider.swift */,
 				AB9D03C82771E56D00BE4244 /* NetworkManager.swift */,
 				AB9D03CE2771F0B400BE4244 /* Dictionary+.swift */,
+				ABCE184E2775B539002B3C56 /* RequestFinishedDelegate.swift */,
 			);
 			path = TasNetwork;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				AB9D03C42771E3F700BE4244 /* DataProvider.swift in Sources */,
 				AB9D03CF2771F0B400BE4244 /* Dictionary+.swift in Sources */,
 				AB9D03C92771E56D00BE4244 /* NetworkManager.swift in Sources */,
+				ABCE184F2775B539002B3C56 /* RequestFinishedDelegate.swift in Sources */,
 				AB9D03AC2771E3E000BE4244 /* TasNetwork.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

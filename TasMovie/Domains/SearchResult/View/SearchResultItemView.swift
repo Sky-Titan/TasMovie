@@ -28,6 +28,7 @@ class SearchResultItemView: BaseXibView, FrontViewProtocol {
     
     static func size(_ data: FrontViewModelProtocol) -> CGSize {
         guard let viewModel = data as? SearchResultItemViewModel else { return .zero }
-        return CGSize(width: UIScreen.mainWidth, height: 334 + viewModel.overview.height(withConstrainedWidth: UIScreen.mainWidth - 48, font: .systemFont(ofSize: 17)) + 20)
+        let overviewHeight = min(viewModel.overview.height(withConstrainedWidth: UIScreen.mainWidth - 48, font: .systemFont(ofSize: 17)), 41)
+        return CGSize(width: UIScreen.mainWidth, height: 20 + 24 + 20 + (UIScreen.mainWidth - 48) * 1.3 + 20 + overviewHeight + 20)
     }
 }

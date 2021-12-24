@@ -19,6 +19,10 @@ public protocol BaseJSONMappable: AnyObject {
     init(from json: [String: Any])
 }
 
+public protocol APIProtocol {
+    func requestAPI(url: String, with method: APIMethod, params: [String: String]) -> APIRequest
+}
+
 public class APIRequest {
     
     private let request: DataRequest
@@ -46,7 +50,7 @@ public class NetworkManager {
     
     private init() {}
 
-    public func requestAPI(url: String, with method: APIMethod, headers: [String: String], params: [String: String] = [:]) -> APIRequest {
+    public func request(url: String, with method: APIMethod, headers: [String: String], params: [String: String] = [:]) -> APIRequest {
         let dataRequest = AF.request(url, method: HTTPMethod(rawValue: method.rawValue), parameters: params, encoding: URLEncoding.default, headers: HTTPHeaders(headers), interceptor: nil, requestModifier: nil)
         return APIRequest(request: dataRequest)
     }

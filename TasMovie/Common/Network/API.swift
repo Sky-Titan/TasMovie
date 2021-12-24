@@ -8,13 +8,13 @@
 import Foundation
 import TasNetwork
 
-class API {
+class API: APIProtocol {
     public static let shared = API()
     
     public func requestAPI(url: String, with method: APIMethod, params: [String: String] = [:]) -> APIRequest {
         var paramsWithRequired: [String: String] = params
         paramsWithRequired.append(contentsOf: requiredParams())
-        return NetworkManager.shared.requestAPI(url: url, with: method, headers: getHeaders(), params: paramsWithRequired)
+        return NetworkManager.shared.request(url: url, with: method, headers: getHeaders(), params: paramsWithRequired)
     }
     
     private func requiredParams() -> [String: String] {

@@ -8,12 +8,6 @@
 import Foundation
 import TasNetwork
 
-extension DataProvider {
-    var api: API {
-        return API.shared
-    }
-}
-
 protocol SearchDataProvider: DataProvider {
 
 }

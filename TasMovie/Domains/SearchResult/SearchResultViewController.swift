@@ -38,13 +38,11 @@ class SearchResultViewController: TSViewController, SearchDataProvider, RequestF
     func requestSucceed() {
         removeIndicator()
         tableView.refreshControl?.endRefreshing()
-        //TODO: remove indicator
     }
     
     func requestFailed() {
         removeIndicator()
         tableView.refreshControl?.endRefreshing()
-        //TODO: remove indicator
     }
     
     @objc
@@ -53,9 +51,12 @@ class SearchResultViewController: TSViewController, SearchDataProvider, RequestF
     }
     
     func search(query: String) {
-        //TODO: indicator
         showIndicator()
         listViewModel.search(query: query)
+    }
+    
+    func getNextPage() {
+        listViewModel.getNextPage()
     }
 }
 
@@ -73,7 +74,7 @@ extension SearchResultViewController: UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if tableView.contentOffset.y + tableView.frame.size.height >= tableView.contentSize.height {
-            listViewModel.getNextPage()
+            getNextPage()
         }
     }
 }

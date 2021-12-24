@@ -36,29 +36,32 @@ class SearchResultViewController: TSViewController, SearchDataProvider, RequestF
     }
     
     func requestSucceed() {
+        removeIndicator()
         tableView.refreshControl?.endRefreshing()
         //TODO: remove indicator
     }
     
     func requestFailed() {
+        removeIndicator()
         tableView.refreshControl?.endRefreshing()
         //TODO: remove indicator
     }
     
     @objc
     func refresh() {
-        listViewModel.search(query: searchBar.text ?? "")
+        search(query: searchBar.text ?? "")
     }
     
     func search(query: String) {
         //TODO: indicator
+        showIndicator()
         listViewModel.search(query: query)
     }
 }
 
 extension SearchResultViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        listViewModel.search(query: searchBar.text ?? "")
+        search(query: searchBar.text ?? "")
     }
     
     func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {

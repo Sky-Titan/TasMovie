@@ -8,6 +8,7 @@
 import UIKit
 
 open class TSViewController: UIViewController {
+    private var indicator: UIActivityIndicatorView?
     
     deinit {
         print("\(self.description) deallocation succeed =====")
@@ -30,5 +31,25 @@ open class TSViewController: UIViewController {
     open override func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {
         viewControllerToPresent.modalPresentationStyle = .fullScreen
         super.present(viewControllerToPresent, animated: flag, completion: completion)
+    }
+    
+    public func showIndicator() {
+        let indicator = UIActivityIndicatorView()
+        indicator.style = .large
+        indicator.color = .gray
+        indicator.frame = view.frame
+        indicator.center = view.center
+        indicator.hidesWhenStopped = true
+        view.addSubview(indicator)
+        view.bringSubviewToFront(indicator)
+        indicator.bindingToSuperview()
+        
+        self.indicator = indicator
+        indicator.startAnimating()
+    }
+    
+    public func removeIndicator() {
+        indicator?.stopAnimating()
+        indicator?.removeFromSuperview()
     }
 }

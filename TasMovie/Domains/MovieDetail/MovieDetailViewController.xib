@@ -11,6 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieDetailViewController" customModule="TasMovie" customModuleProvider="target">
             <connections>
+                <outlet property="backButton" destination="iqG-5i-WhP" id="hdO-U3-Tmb"/>
+                <outlet property="tableView" destination="j2f-mr-1Fj" id="zVd-rl-vRG"/>
+                <outlet property="titleLabel" destination="FLI-k2-vmG" id="WJs-kY-yNp"/>
                 <outlet property="view" destination="iN0-l3-epB" id="ltL-zz-D4m"/>
             </connections>
         </placeholder>
@@ -29,9 +32,12 @@
                             </constraints>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="arrow.left" catalog="system"/>
+                            <connections>
+                                <action selector="backButtonClicked:" destination="-1" eventType="touchUpInside" id="dFh-pf-685"/>
+                            </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLI-k2-vmG">
-                            <rect key="frame" x="186.5" y="13" width="41.5" height="24"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLI-k2-vmG" userLabel="Title">
+                            <rect key="frame" x="207" y="25" width="0.0" height="0.0"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>

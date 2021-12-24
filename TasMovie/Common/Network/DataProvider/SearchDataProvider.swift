@@ -13,7 +13,7 @@ protocol SearchDataProvider: DataProvider {
 }
 
 extension SearchDataProvider {
-    func requestSearchMovie(query: String, language: String? = nil, page: Int? = nil, include_adult: Bool? = nil, region: String? = nil, year: Int? = nil, primary_release_year: Int? = nil, completion: @escaping(APIResult<SearchResultModel>) -> Void) {
+    func requestSearchMovie(query: String, language: String? = "ko", page: Int? = nil, include_adult: Bool? = nil, region: String? = nil, year: Int? = nil, primary_release_year: Int? = nil, completion: @escaping(APIResult<SearchResultModel>) -> Void) {
         var params: [String: String] = [:]
         params["query"] = query
         if let language = language {

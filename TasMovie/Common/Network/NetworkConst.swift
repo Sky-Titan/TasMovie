@@ -27,6 +27,12 @@ public class NetworkConst {
         }
     }
     
+    enum MovieUrl {
+        static func getMovieDetail(id: Int) -> String {
+            return baseUri + Path.movie + "/\(id)"
+        }
+    }
+    
     enum ImageUrl {
         static var getOriginalImage: String {
             return imageBaseUri + "/original"

@@ -7,7 +7,6 @@
 
 import Foundation
 
-public protocol DataProvider: AnyObject {
-    var api: APIProtocol { get }
+public protocol DataProvider {
 }
 

@@ -73,7 +73,7 @@ class SearchResultListViewModel: BaseListViewModel, SearchDataProvider {
     func requestSearchMovie(query: String) {
         guard isRequesting == false else { return }
         isRequesting = true
-        requestSearchMovie(query: query, language: "ko-KO", page: (page ?? 0) + 1, completion: { [weak self] result in
+        requestSearchMovie(query: query, page: (page ?? 0) + 1, completion: { [weak self] result in
             guard let strongSelf = self else { return }
             switch result {
             case .success(let response):

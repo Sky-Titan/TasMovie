@@ -9,7 +9,7 @@ import Foundation
 import TasNetwork
 
 extension DataProvider {
-    var api: APIProtocol {
+    var api: API {
         return API.shared
     }
 }

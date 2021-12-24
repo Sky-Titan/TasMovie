@@ -23,12 +23,14 @@ class SearchResultItemView: BaseXibView, FrontViewProtocol {
         guard let viewModel = viewModel as? SearchResultItemViewModel else { return }
         titleLabel.text = viewModel.title
         descriptionLabel.text = viewModel.overview
-        imageView.sd_setImage(with: URL(string: viewModel.imageUrl), completed: nil)
+        if let imageUrl = viewModel.imageUrl {
+            imageView.sd_setImage(with: URL(string: imageUrl), completed: nil)
+        }
     }
     
     static func size(_ data: FrontViewModelProtocol) -> CGSize {
         guard let viewModel = data as? SearchResultItemViewModel else { return .zero }
-        let overviewHeight = min(viewModel.overview.height(withConstrainedWidth: UIScreen.mainWidth - 48, font: .systemFont(ofSize: 17)), 41)
+        let overviewHeight = min((viewModel.overview ?? "").height(withConstrainedWidth: UIScreen.mainWidth - 48, font: .systemFont(ofSize: 17)), 41)
         return CGSize(width: UIScreen.mainWidth, height: 20 + 24 + 20 + (UIScreen.mainWidth - 48) * 1.3 + 20 + overviewHeight + 20)
     }
 }

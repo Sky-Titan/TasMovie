@@ -23,7 +23,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyM-Vo-Dud">
                     <rect key="frame" x="0.0" y="0.0" width="100" height="60"/>
                     <color key="backgroundColor" red="0.00066248758230358362" green="0.56903594732284546" blue="0.99580460786819458" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                     <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <userDefinedRuntimeAttributes>

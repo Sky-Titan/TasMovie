@@ -19,7 +19,7 @@ class GenreItemView: BaseXibView, FrontViewProtocol {
     
     static func size(_ data: FrontViewModelProtocol) -> CGSize {
         guard let viewModel = data as? GenreItemViewModel else { return .zero }
-        let width: CGFloat = viewModel.name.width(withConstrainedHeight: 40, font: .systemFont(ofSize: 14)) + 20
+        let width: CGFloat = viewModel.name.width(withConstrainedHeight: 40, font: .systemFont(ofSize: 14, weight: .semibold)) + 20
         return CGSize(width: width, height: 40)
     }
     

@@ -48,4 +48,15 @@ open class TSViewController: UIViewController {
         indicator?.stopAnimating()
         indicator?.removeFromSuperview()
     }
+    
+    public func showNetworkError(_ handler: @escaping () -> Void = {}) {
+        let alert = UIAlertController(title: "네트워크 오류", message: "다시 시도해주십시오.", preferredStyle: .alert)
+        
+        let defaultAction = UIAlertAction(title: "다시 시도", style: .default, handler: { _ in
+            handler()
+        })
+        
+        alert.addAction(defaultAction)
+        self.present(alert, animated: false, completion: nil)
+    }
 }

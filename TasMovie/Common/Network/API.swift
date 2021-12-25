@@ -17,6 +17,12 @@ class API: APIProtocol {
         return NetworkManager.shared.request(url: url, with: method, headers: headers(), params: paramsWithRequired)
     }
     
+    public func requestAPIWithJsonBody(url: String, with method: APIMethod, params: [String: String] = [:]) -> APIRequest {
+        var paramsWithRequired: [String: String] = params
+        paramsWithRequired.append(contentsOf: requiredParams())
+        return NetworkManager.shared.requestWithJsonBody(url: url, with: method, headers: headers(), params: paramsWithRequired)
+    }
+    
     private func requiredParams() -> [String: String] {
         var params: [String: String] = [:]
         params["api_key"] = NetworkConst.API_KEY

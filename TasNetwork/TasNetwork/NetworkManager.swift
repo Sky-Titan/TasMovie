@@ -55,6 +55,11 @@ public class NetworkManager {
         let dataRequest = AF.request(url, method: HTTPMethod(rawValue: method.rawValue), parameters: params, encoding: URLEncoding.default, headers: HTTPHeaders(headers), interceptor: nil, requestModifier: nil)
         return APIRequest(request: dataRequest)
     }
+    
+    public func requestWithJsonBody(url: String, with method: APIMethod, headers: [String: String], params: [String: String] = [:]) -> APIRequest {
+        let dataRequest = AF.request(url, method: HTTPMethod(rawValue: method.rawValue), parameters: params, encoding: JSONEncoding.default, headers: HTTPHeaders(headers), interceptor: nil, requestModifier: nil)
+        return APIRequest(request: dataRequest)
+    }
 }
 
 public enum APIMethod: String {

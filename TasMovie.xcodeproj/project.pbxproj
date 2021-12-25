@@ -27,6 +27,7 @@
 		AB6EE74F2776ED6400C2FFD9 /* ConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6EE74E2776ED6400C2FFD9 /* ConfigManager.swift */; };
 		AB6EE7512776F03600C2FFD9 /* AuthenticationDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6EE7502776F03600C2FFD9 /* AuthenticationDataProvider.swift */; };
 		AB6EE7532776F25900C2FFD9 /* NewTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6EE7522776F25900C2FFD9 /* NewTokenModel.swift */; };
+		AB6EE7552776F3C200C2FFD9 /* NewSessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6EE7542776F3C200C2FFD9 /* NewSessionModel.swift */; };
 		AB777EE2277093040044DE68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB777EE1277093040044DE68 /* AppDelegate.swift */; };
 		AB777EE4277093040044DE68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB777EE3277093040044DE68 /* SceneDelegate.swift */; };
 		AB777EE6277093040044DE68 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB777EE5277093040044DE68 /* SearchResultViewController.swift */; };
@@ -122,6 +123,7 @@
 		AB6EE74E2776ED6400C2FFD9 /* ConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigManager.swift; sourceTree = "<group>"; };
 		AB6EE7502776F03600C2FFD9 /* AuthenticationDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDataProvider.swift; sourceTree = "<group>"; };
 		AB6EE7522776F25900C2FFD9 /* NewTokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTokenModel.swift; sourceTree = "<group>"; };
+		AB6EE7542776F3C200C2FFD9 /* NewSessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSessionModel.swift; sourceTree = "<group>"; };
 		AB777EDE277093040044DE68 /* TasMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TasMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB777EE1277093040044DE68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB777EE3277093040044DE68 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -370,6 +372,7 @@
 				AB9D03D82771F59100BE4244 /* MovieSearchModel.swift */,
 				ABB67C6227758DF500498DED /* SearchResultModel.swift */,
 				AB6EE7522776F25900C2FFD9 /* NewTokenModel.swift */,
+				AB6EE7542776F3C200C2FFD9 /* NewSessionModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -577,6 +580,7 @@
 				ABCE18462775A55C002B3C56 /* SearchResultListViewModel.swift in Sources */,
 				AB6EE74F2776ED6400C2FFD9 /* ConfigManager.swift in Sources */,
 				AB6EE7332776D19400C2FFD9 /* SearchEmptyView.swift in Sources */,
+				AB6EE7552776F3C200C2FFD9 /* NewSessionModel.swift in Sources */,
 				AB9D03D92771F59100BE4244 /* MovieSearchModel.swift in Sources */,
 				AB777F2D27709F400044DE68 /* ThirdViewController.swift in Sources */,
 				AB98B2742775DD1A003C1F8E /* MovieDetailListViewModel.swift in Sources */,

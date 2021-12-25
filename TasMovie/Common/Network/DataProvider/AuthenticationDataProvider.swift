@@ -18,5 +18,9 @@ extension AuthenticationDataProvider {
         api.send(completion: completion)
     }
     
-    
+    func requestNewSession(completion: @escaping(APIResult<NewSessionModel>) -> Void) {
+        //TODO: add params
+        let api = api.requestAPI(url: NetworkConst.AuthenticationUrl.getNewSession, with: .post)
+        api.send(completion: completion)
+    }
 }

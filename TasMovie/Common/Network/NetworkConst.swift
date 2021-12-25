@@ -26,6 +26,9 @@ public class NetworkConst {
         static var getNewToken: String {
             return baseUri + Path.authentication + "/token/new"
         }
+        static var getNewSession: String {
+            return baseUri + Path.authentication + "/session/new"
+        }
     }
     
     enum SearchUrl {

@@ -14,6 +14,9 @@ class MovieDetailDescriptionViewModel: FrontViewModelProtocol {
     var overview: String? {
         return model.overview
     }
+    var popularity: Double {
+        return model.popularity
+    }
     var production_countries: [CountryModel] {
         return model.production_countries
     }

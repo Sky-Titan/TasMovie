@@ -25,7 +25,7 @@ class MovieDetailListViewModel: BaseListViewModel, MovieDataProvider {
     private func makeFrontSection(model: MovieDetailModel) {
         let section = FrontSection()
         section.cellViewModels.append(MovieDetailPosterViewModel(model: model))
-        
+        section.cellViewModels.append(MovieDetailDescriptionViewModel(model: model))
         frontSections.append(section)
         delegate?.viewModelRefreshed(self)
     }

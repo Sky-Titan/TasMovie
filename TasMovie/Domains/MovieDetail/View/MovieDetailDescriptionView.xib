@@ -12,6 +12,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieDetailDescriptionView" customModule="TasMovie" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="aBk-vB-xEQ"/>
+                <outlet property="overviewLabel" destination="NwP-dT-uVf" id="dpx-1W-yFG"/>
+                <outlet property="popularityLabel" destination="BmF-4j-A4n" id="dGa-wp-ook"/>
+                <outlet property="releasedDateLabel" destination="0Ef-en-blt" id="TYh-PC-8Ho"/>
+                <outlet property="runtimeLabel" destination="KTP-7u-SaD" id="o5v-Oc-CDg"/>
+                <outlet property="statusLabel" destination="JQr-19-jUk" id="V5v-7w-vVa"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -87,17 +92,17 @@
                         </label>
                     </subviews>
                 </stackView>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="5hx-xW-AZj">
-                    <rect key="frame" x="24" y="132" width="49.5" height="36"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="5hx-xW-AZj">
+                    <rect key="frame" x="24" y="132" width="366" height="36"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="줄거리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vf2-RV-lVf">
-                            <rect key="frame" x="0.0" y="0.0" width="49.5" height="17"/>
+                            <rect key="frame" x="0.0" y="0.0" width="366" height="17"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="runtime" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NwP-dT-uVf" userLabel="overviewLabel">
-                            <rect key="frame" x="0.0" y="19" width="49.5" height="17"/>
+                            <rect key="frame" x="0.0" y="19" width="366" height="17"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <color key="textColor" systemColor="secondaryLabelColor"/>
                             <nil key="highlightedColor"/>
@@ -109,7 +114,7 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="5hx-xW-AZj" firstAttribute="top" secondItem="3rH-5s-vYp" secondAttribute="bottom" constant="20" id="4rl-aC-33N"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NwP-dT-uVf" secondAttribute="trailing" constant="24" id="5CX-f6-C8w"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="NwP-dT-uVf" secondAttribute="trailing" constant="24" id="5CX-f6-C8w"/>
                 <constraint firstItem="cmM-CJ-K1k" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="24" id="6Xf-bz-xEN"/>
                 <constraint firstItem="3rH-5s-vYp" firstAttribute="top" secondItem="WPB-P7-u9n" secondAttribute="bottom" constant="20" id="8gc-Gl-kfB"/>
                 <constraint firstItem="3rH-5s-vYp" firstAttribute="leading" secondItem="WPB-P7-u9n" secondAttribute="leading" id="Alj-hw-a9r"/>
@@ -121,7 +126,6 @@
                 <constraint firstItem="cmM-CJ-K1k" firstAttribute="top" secondItem="WPB-P7-u9n" secondAttribute="top" id="e8X-ay-fio"/>
                 <constraint firstItem="WPB-P7-u9n" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="kB9-Jd-fBz"/>
                 <constraint firstItem="5hx-xW-AZj" firstAttribute="leading" secondItem="WPB-P7-u9n" secondAttribute="leading" id="oLG-Ld-Cyl"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="NwP-dT-uVf" secondAttribute="bottom" constant="20" id="ozo-r7-YTb"/>
                 <constraint firstItem="7NO-7U-5Tb" firstAttribute="leading" secondItem="cmM-CJ-K1k" secondAttribute="leading" id="tNm-Tj-rJ8"/>
                 <constraint firstItem="WPB-P7-u9n" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="z4P-GK-vwO"/>
             </constraints>

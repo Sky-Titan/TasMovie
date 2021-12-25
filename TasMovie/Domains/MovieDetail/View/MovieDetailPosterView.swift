@@ -22,7 +22,6 @@ class MovieDetailPosterView: BaseXibView, FrontViewProtocol {
         return CGSize(width: UIScreen.mainWidth, height: (UIScreen.mainWidth - 48) * 1.3 + 40)
     }
     
-    
     override func nibName() -> String? {
         return "MovieDetailPosterView"
     }

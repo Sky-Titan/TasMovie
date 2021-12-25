@@ -51,6 +51,7 @@ class SearchResultViewController: TSViewController, SearchDataProvider, RequestF
     }
     
     func search(query: String) {
+        tableView.setContentOffset(.zero, animated: false)
         showIndicator()
         listViewModel.search(query: query)
     }

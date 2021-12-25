@@ -15,7 +15,6 @@ class MovieDetailDescriptionView: BaseXibView, FrontViewProtocol {
     @IBOutlet weak var runtimeLabel: UILabel!
     @IBOutlet weak var overviewLabel: UILabel!
     
-    
     func setViewModel(_ viewModel: FrontViewModelProtocol) {
         guard let viewModel = viewModel as? MovieDetailDescriptionViewModel else { return }
         releasedDateLabel.text = viewModel.release_date
@@ -36,10 +35,8 @@ class MovieDetailDescriptionView: BaseXibView, FrontViewProtocol {
         return CGSize(width: UIScreen.mainWidth, height: overviewHeight + 132 + 17 + 20)
     }
     
-    
     override func nibName() -> String? {
         return "MovieDetailDescriptionView"
     }
-    
     
 }

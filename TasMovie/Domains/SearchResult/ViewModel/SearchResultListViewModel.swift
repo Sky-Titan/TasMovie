@@ -27,8 +27,19 @@ class SearchResultListViewModel: BaseListViewModel, SearchDataProvider {
     }
     
     func resetModel(model: SearchResultModel) {
-        frontSections = []
-        makeFrontSection(model: model)
+        if model.results.isEmpty {
+            showEmptyView()
+            return
+        }
+        
+        self.page = model.page
+        if total_pages == nil {
+            frontSections = []
+            makeFrontSection(model: model)
+        } else {
+            appendItems(model: model)
+        }
+        self.total_pages = model.total_pages
     }
     
     private func makeFrontSection(model: SearchResultModel) {
@@ -47,6 +58,14 @@ class SearchResultListViewModel: BaseListViewModel, SearchDataProvider {
             section?.cellViewModels.append(SearchResultItemViewModel(model: movieModel))
             section?.cellViewModels.append(ColorDummyViewModel(color: .gray, height: 1))
         }
+        delegate?.viewModelRefreshed(self)
+    }
+    
+    private func showEmptyView() {
+        frontSections = []
+        let section = FrontSection()
+        section.cellViewModels.append(SearchEmptyViewModel())
+        frontSections.append(section)
         delegate?.viewModelRefreshed(self)
     }
     
@@ -77,13 +96,7 @@ class SearchResultListViewModel: BaseListViewModel, SearchDataProvider {
             guard let strongSelf = self else { return }
             switch result {
             case .success(let response):
-                strongSelf.page = response.page
-                if strongSelf.total_pages == nil {
-                    strongSelf.resetModel(model: response)
-                } else {
-                    strongSelf.appendItems(model: response)
-                }
-                strongSelf.total_pages = response.total_pages
+                strongSelf.resetModel(model: response)
                 strongSelf.requestFinishedDelegate?.requestSucceed()
             case .failure:
                 strongSelf.requestFinishedDelegate?.requestFailed()

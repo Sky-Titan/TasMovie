@@ -19,6 +19,13 @@ public class NetworkConst {
         static let movie = "/movie"
         static let find = "/find"
         static let search = "/search"
+        static let authentication = "/authentication"
+    }
+    
+    enum AuthenticationUrl {
+        static var getNewToken: String {
+            return baseUri + Path.authentication + "/token/new"
+        }
     }
     
     enum SearchUrl {

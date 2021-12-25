@@ -25,8 +25,13 @@ public class ViewManager {
         viewControllers.append(viewController)
     }
     
-    internal func removeViewController() {
-        viewControllers.removeLast()
+    internal func removeViewController(viewController: TSViewController) {
+        for (index, vc) in viewControllers.enumerated() {
+            if vc == viewController {
+                viewControllers.remove(at: index)
+                return
+            }
+        }
     }
     
     public func presentViewController(_ viewControllerToPresent: TSViewController, animated flag: Bool, completion: (() -> Void)? = nil) {

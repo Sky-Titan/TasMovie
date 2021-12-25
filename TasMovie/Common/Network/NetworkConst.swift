@@ -15,7 +15,7 @@ public class NetworkConst {
         return Bundle.main.object(forInfoDictionaryKey: "TMDB_API_KEY") as? String ?? ""
     }
     
-    enum Path {
+    private enum Path {
         static let movie = "/movie"
         static let find = "/find"
         static let search = "/search"

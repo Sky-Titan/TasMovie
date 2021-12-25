@@ -15,3 +15,28 @@ extension Dictionary {
         }
     }
 }
+
+extension Dictionary where Key == String, Value == Any {
+    public func string(itemKey: String) -> String? {
+        return self[itemKey] as? String
+    }
+    
+    public func integer(itemKey: String) -> Int? {
+        return self[itemKey] as? Int
+    }
+    
+    public func double(itemKey: String) -> Double? {
+        return self[itemKey] as? Double
+    }
+    
+    public func bool(itemKey: String) -> Bool? {
+        return self[itemKey] as? Bool
+    }
+    
+    public func array<MappingType>(itemKey: String, itemType: MappingType.Type) -> [MappingType] {
+        if let arr = self[itemKey] as? [MappingType] {
+            return arr
+        }
+        return []
+    }
+}

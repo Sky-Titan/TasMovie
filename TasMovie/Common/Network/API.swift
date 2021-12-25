@@ -14,7 +14,7 @@ class API: APIProtocol {
     public func requestAPI(url: String, with method: APIMethod, params: [String: String] = [:]) -> APIRequest {
         var paramsWithRequired: [String: String] = params
         paramsWithRequired.append(contentsOf: requiredParams())
-        return NetworkManager.shared.request(url: url, with: method, headers: getHeaders(), params: paramsWithRequired)
+        return NetworkManager.shared.request(url: url, with: method, headers: headers(), params: paramsWithRequired)
     }
     
     private func requiredParams() -> [String: String] {
@@ -23,7 +23,7 @@ class API: APIProtocol {
         return params
     }
     
-    private func getHeaders() -> [String: String] {
+    private func headers() -> [String: String] {
         var headers: [String: String] = [:]
         headers["Content-Type"] = "application/json"
         headers["Accept"] = "application/json"

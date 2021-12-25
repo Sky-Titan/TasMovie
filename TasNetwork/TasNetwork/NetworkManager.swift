@@ -24,7 +24,6 @@ public protocol APIProtocol {
 }
 
 public class APIRequest {
-    
     private let request: DataRequest
     
     public init(request: DataRequest) {
@@ -34,11 +33,13 @@ public class APIRequest {
     public func send<ResultType: BaseJSONMappable>(completion: @escaping(APIResult<ResultType>) -> Void) {
         request.validate(statusCode: 200..<500)
             .responseString(completionHandler: { response in
-                if let jsonString = response.value, let jsonDict = jsonString.convertToDictionary() {
-                    if response.error == nil {
-                        completion(.success(ResultType(from: jsonDict)))
-                    } else {
-                        completion(.failure)
+                DispatchQueue.main.async {
+                    if let jsonString = response.value, let jsonDict = jsonString.convertToDictionary() {
+                        if response.error == nil {
+                            completion(.success(ResultType(from: jsonDict)))
+                        } else {
+                            completion(.failure)
+                        }
                     }
                 }
             })

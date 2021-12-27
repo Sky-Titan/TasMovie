@@ -59,4 +59,19 @@ open class TSViewController: UIViewController {
         alert.addAction(defaultAction)
         self.present(alert, animated: false, completion: nil)
     }
+    
+    public func showAlert(title: String, message: String, leftButtonTitle: String, leftButtonHandler: (() -> Void)? = nil, rightButtonTitle: String, rightButtonHandler: (() -> Void)? = nil) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: leftButtonTitle, style: .cancel, handler: { _ in
+            leftButtonHandler?()
+        })
+        let defaultAction = UIAlertAction(title: rightButtonTitle, style: .default, handler: { _ in
+            rightButtonHandler?()
+        })
+        
+        alert.addAction(cancelAction)
+        alert.addAction(defaultAction)
+        self.present(alert, animated: false, completion: nil)
+    }
 }

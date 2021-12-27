@@ -66,6 +66,10 @@
 		ABCE18492775A77A002B3C56 /* SearchResultItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCE18482775A77A002B3C56 /* SearchResultItemView.swift */; };
 		ABCE184B2775A7A5002B3C56 /* SearchResultItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABCE184A2775A7A5002B3C56 /* SearchResultItemView.xib */; };
 		ABCE184D2775AEE5002B3C56 /* SearchResultItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCE184C2775AEE5002B3C56 /* SearchResultItemViewModel.swift */; };
+		ABD060E72779D7A200141366 /* SuccessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD060E62779D7A200141366 /* SuccessModel.swift */; };
+		ABD060E92779D95000141366 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD060E82779D95000141366 /* UserManager.swift */; };
+		ABD060EC2779D97100141366 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD060EB2779D97100141366 /* IntroViewController.swift */; };
+		ABD060EE2779D98800141366 /* IntroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABD060ED2779D98800141366 /* IntroViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,6 +165,10 @@
 		ABCE18482775A77A002B3C56 /* SearchResultItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultItemView.swift; sourceTree = "<group>"; };
 		ABCE184A2775A7A5002B3C56 /* SearchResultItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultItemView.xib; sourceTree = "<group>"; };
 		ABCE184C2775AEE5002B3C56 /* SearchResultItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultItemViewModel.swift; sourceTree = "<group>"; };
+		ABD060E62779D7A200141366 /* SuccessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessModel.swift; sourceTree = "<group>"; };
+		ABD060E82779D95000141366 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		ABD060EB2779D97100141366 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		ABD060ED2779D98800141366 /* IntroViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IntroViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				AB6EE74E2776ED6400C2FFD9 /* ConfigManager.swift */,
+				ABD060E82779D95000141366 /* UserManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -275,6 +284,7 @@
 		AB777F1E277095080044DE68 /* Domains */ = {
 			isa = PBXGroup;
 			children = (
+				ABD060EA2779D96800141366 /* Intro */,
 				AB98B2692775D527003C1F8E /* MovieDetail */,
 				ABCE18432775A4AB002B3C56 /* SearchResult */,
 				AB777F2827709D900044DE68 /* SecondViewController.swift */,
@@ -373,6 +383,7 @@
 				ABB67C6227758DF500498DED /* SearchResultModel.swift */,
 				AB6EE7522776F25900C2FFD9 /* NewTokenModel.swift */,
 				AB6EE7542776F3C200C2FFD9 /* NewSessionModel.swift */,
+				ABD060E62779D7A200141366 /* SuccessModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -407,6 +418,15 @@
 				AB6EE7342776D1B100C2FFD9 /* SearchEmptyView.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		ABD060EA2779D96800141366 /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				ABD060EB2779D97100141366 /* IntroViewController.swift */,
+				ABD060ED2779D98800141366 /* IntroViewController.xib */,
+			);
+			path = Intro;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -531,6 +551,7 @@
 				AB04EEF22775EA6D001EA4A4 /* MovieDetailPosterView.xib in Resources */,
 				AB777F1D277093ED0044DE68 /* SearchResultViewController.xib in Resources */,
 				AB6EE7482776DED900C2FFD9 /* GenreItemView.xib in Resources */,
+				ABD060EE2779D98800141366 /* IntroViewController.xib in Resources */,
 				AB777F2B27709DBD0044DE68 /* SecondViewController.xib in Resources */,
 				AB04EEF82775EC2C001EA4A4 /* MovieDetailDescriptionView.xib in Resources */,
 			);
@@ -561,6 +582,7 @@
 				ABB67C652775901E00498DED /* API.swift in Sources */,
 				AB98B26B2775D536003C1F8E /* MovieDetailViewController.swift in Sources */,
 				AB04EEF62775EBEE001EA4A4 /* MovieDetailDescriptionView.swift in Sources */,
+				ABD060EC2779D97100141366 /* IntroViewController.swift in Sources */,
 				AB777EE6277093040044DE68 /* SearchResultViewController.swift in Sources */,
 				AB777EE2277093040044DE68 /* AppDelegate.swift in Sources */,
 				AB777F23277098000044DE68 /* TabBarView.swift in Sources */,
@@ -575,6 +597,7 @@
 				ABB67C6327758DF500498DED /* SearchResultModel.swift in Sources */,
 				AB6EE7532776F25900C2FFD9 /* NewTokenModel.swift in Sources */,
 				ABB67C6127758A6100498DED /* SearchDataProvider.swift in Sources */,
+				ABD060E92779D95000141366 /* UserManager.swift in Sources */,
 				AB04EEF42775EACA001EA4A4 /* MovieDetailPosterViewModel.swift in Sources */,
 				ABCE184D2775AEE5002B3C56 /* SearchResultItemViewModel.swift in Sources */,
 				ABCE18462775A55C002B3C56 /* SearchResultListViewModel.swift in Sources */,
@@ -587,6 +610,7 @@
 				AB04EEFA2775EC50001EA4A4 /* MovieDetailDescriptionViewModel.swift in Sources */,
 				AB9D03D62771F46E00BE4244 /* NetworkConst.swift in Sources */,
 				AB98B2722775DC5B003C1F8E /* DataProvider+.swift in Sources */,
+				ABD060E72779D7A200141366 /* SuccessModel.swift in Sources */,
 				AB777EE4277093040044DE68 /* SceneDelegate.swift in Sources */,
 				AB6EE7372776D20500C2FFD9 /* SearchEmptyViewModel.swift in Sources */,
 				AB6EE7442776DD8300C2FFD9 /* MovieDetailGenreIconViewModel.swift in Sources */,

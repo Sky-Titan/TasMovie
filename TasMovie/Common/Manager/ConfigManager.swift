@@ -14,7 +14,6 @@ class ConfigManager {
         guard let code = Locale.current.languageCode else { return .en }
         return SupportLanguage(rawValue: code) ?? .en
     }
-    
 }
 
 enum SupportLanguage: String {

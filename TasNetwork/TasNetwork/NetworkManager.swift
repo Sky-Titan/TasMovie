@@ -12,11 +12,25 @@ import CoreData
 
 public enum APIResult<ResponseT: BaseJSONMappable> {
     case success(ResponseT)
-    case failure
+    case failure(ErrorModel)
 }
 
 public protocol BaseJSONMappable: AnyObject {
     init(from json: [String: Any])
+}
+
+public class ErrorModel: BaseJSONMappable {
+    public let status_message: String
+    public let status_code: Int
+    
+    public required init(from json: [String : Any]) {
+        status_message = json.string(itemKey: "status_message") ?? ""
+        status_code = json.integer(itemKey: "status_code") ?? 0
+    }
+}
+
+public protocol BaseJSONMapper: AnyObject {
+    func toDictionary() -> [String: Any]
 }
 
 public protocol APIProtocol {
@@ -37,8 +51,8 @@ public class APIRequest {
                     if let jsonString = response.value, let jsonDict = jsonString.convertToDictionary() {
                         if response.error == nil {
                             completion(.success(ResultType(from: jsonDict)))
-                        } else {
-                            completion(.failure)
+                        } else if response.error?.isResponseValidationError == true {
+                            completion(.failure(ErrorModel(from: jsonDict)))
                         }
                     }
                 }
@@ -56,7 +70,7 @@ public class NetworkManager {
         return APIRequest(request: dataRequest)
     }
     
-    public func requestWithJsonBody(url: String, with method: APIMethod, headers: [String: String], params: [String: String] = [:]) -> APIRequest {
+    public func requestWithJsonBody(url: String, with method: APIMethod, headers: [String: String], params: [String: Any] = [:]) -> APIRequest {
         let dataRequest = AF.request(url, method: HTTPMethod(rawValue: method.rawValue), parameters: params, encoding: JSONEncoding.default, headers: HTTPHeaders(headers), interceptor: nil, requestModifier: nil)
         return APIRequest(request: dataRequest)
     }

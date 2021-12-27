@@ -49,4 +49,12 @@ public class ViewManager {
     public func popViewController(animated: Bool) {
         currentViewController?.navigationController?.popViewController(animated: animated)
     }
+    
+    public func showNetworkError(_ handler: @escaping () -> Void = {}) {
+        currentViewController?.showNetworkError(handler)
+    }
+    
+    public func showAlert(title: String, message: String, leftButtonTitle: String, leftButtonHandler: (() -> Void)? = nil, rightButtonTitle: String, rightButtonHandler: (() -> Void)? = nil) {
+        currentViewController?.showAlert(title: title, message: message, leftButtonTitle: leftButtonTitle, leftButtonHandler: leftButtonHandler, rightButtonTitle: rightButtonTitle, rightButtonHandler: rightButtonHandler)
+    }
 }

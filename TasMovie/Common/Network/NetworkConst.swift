@@ -26,8 +26,14 @@ public class NetworkConst {
         static var getNewToken: String {
             return baseUri + Path.authentication + "/token/new"
         }
-        static var getNewSession: String {
+        static var createNewSession: String {
             return baseUri + Path.authentication + "/session/new"
+        }
+        static var requestValidateWithLogin: String {
+            return baseUri + Path.authentication + "/token/validate_with_login"
+        }
+        static var logout: String {
+            return baseUri + Path.authentication + "/session"
         }
     }
     

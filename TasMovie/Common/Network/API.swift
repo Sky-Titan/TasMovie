@@ -17,10 +17,21 @@ class API: APIProtocol {
         return NetworkManager.shared.request(url: url, with: method, headers: headers(), params: paramsWithRequired)
     }
     
-    public func requestAPIWithJsonBody(url: String, with method: APIMethod, params: [String: String] = [:]) -> APIRequest {
-        var paramsWithRequired: [String: String] = params
-        paramsWithRequired.append(contentsOf: requiredParams())
-        return NetworkManager.shared.requestWithJsonBody(url: url, with: method, headers: headers(), params: paramsWithRequired)
+    public func requestAPIWithJsonBody(url: String, with method: APIMethod, params: [String: Any] = [:]) -> APIRequest {
+        let addedParams = requiredParams()
+        var url = url
+        if addedParams.isNotEmpty {
+            url += "?"
+            var isFirst = true
+            for (key, value) in addedParams.enumerated() {
+                if !isFirst {
+                    url += "&"
+                    isFirst = false
+                }
+                url += "\(key)=\(value)"
+            }
+        }
+        return NetworkManager.shared.requestWithJsonBody(url: url, with: method, headers: headers(), params: params)
     }
     
     private func requiredParams() -> [String: String] {

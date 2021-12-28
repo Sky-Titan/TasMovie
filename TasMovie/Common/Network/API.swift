@@ -23,12 +23,12 @@ class API: APIProtocol {
         if addedParams.isNotEmpty {
             url += "?"
             var isFirst = true
-            for (key, value) in addedParams.enumerated() {
+            for (index, element) in addedParams.enumerated() {
                 if !isFirst {
                     url += "&"
                     isFirst = false
                 }
-                url += "\(key)=\(value)"
+                url += "\(element.key)=\(element.value)"
             }
         }
         return NetworkManager.shared.requestWithJsonBody(url: url, with: method, headers: headers(), params: params)

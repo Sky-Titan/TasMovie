@@ -54,6 +54,8 @@ public class APIRequest {
                         } else if response.error?.isResponseValidationError == true {
                             completion(.failure(ErrorModel(from: jsonDict)))
                         }
+                    } else if let error = response.error {
+                        print(error.errorDescription ?? "")
                     }
                 }
             })

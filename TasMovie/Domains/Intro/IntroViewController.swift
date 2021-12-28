@@ -12,15 +12,24 @@ class IntroViewController: TSViewController, AuthenticationDataProvider {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         checkRequestToken()
     }
     
     private func checkRequestToken() {
         guard UserManager.shared.requestToken != nil else {
+            print("else")
             requestNewToken()
             return
         }
-        
         checkIfNeededLogin()
     }
     
@@ -44,13 +53,10 @@ class IntroViewController: TSViewController, AuthenticationDataProvider {
     
     private func checkIfNeededLogin() {
         if UserManager.shared.sessionId != nil {
-            // TODO: go to main tab
+            ViewManager.shared.goToMain()
         } else {
-            //TODO: go to login page
-            /*
-             enter username, password and request new token with validate,
-             and create session with new token
-             */
+            let loginVC = SignInViewController()
+            ViewManager.shared.currentViewController?.present(loginVC, animated: true, completion: nil)
         }
         
     }

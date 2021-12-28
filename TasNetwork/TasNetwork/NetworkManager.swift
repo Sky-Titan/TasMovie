@@ -35,6 +35,7 @@ public protocol BaseJSONMapper: AnyObject {
 
 public protocol APIProtocol {
     func requestAPI(url: String, with method: APIMethod, params: [String: String]) -> APIRequest
+    func requestAPIWithJsonBody(url: String, with method: APIMethod, params: [String: Any]) -> APIRequest
 }
 
 public class APIRequest {
@@ -67,13 +68,17 @@ public class NetworkManager {
     
     private init() {}
 
-    public func request(url: String, with method: APIMethod, headers: [String: String], params: [String: String] = [:]) -> APIRequest {
-        let dataRequest = AF.request(url, method: HTTPMethod(rawValue: method.rawValue), parameters: params, encoding: URLEncoding.default, headers: HTTPHeaders(headers), interceptor: nil, requestModifier: nil)
-        return APIRequest(request: dataRequest)
+    public func requestQuery(url: String, with method: APIMethod, headers: [String: String], params: [String: Any] = [:]) -> APIRequest {
+        return request(url: url, with: method, headers: headers, params: params, isJsonBody: false)
     }
     
     public func requestWithJsonBody(url: String, with method: APIMethod, headers: [String: String], params: [String: Any] = [:]) -> APIRequest {
-        let dataRequest = AF.request(url, method: HTTPMethod(rawValue: method.rawValue), parameters: params, encoding: JSONEncoding.default, headers: HTTPHeaders(headers), interceptor: nil, requestModifier: nil)
+        return request(url: url, with: method, headers: headers, params: params, isJsonBody: true)
+    }
+    
+    private func request(url: String, with method: APIMethod, headers: [String: String], params: [String: Any] = [:], isJsonBody: Bool) -> APIRequest {
+        let encoding: ParameterEncoding = isJsonBody ? JSONEncoding.default : URLEncoding.default
+        let dataRequest = AF.request(url, method: HTTPMethod(rawValue: method.rawValue), parameters: params, encoding: encoding, headers: HTTPHeaders(headers), interceptor: nil, requestModifier: nil)
         return APIRequest(request: dataRequest)
     }
 }

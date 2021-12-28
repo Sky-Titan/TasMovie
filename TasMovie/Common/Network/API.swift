@@ -14,24 +14,28 @@ class API: APIProtocol {
     public func requestAPI(url: String, with method: APIMethod, params: [String: String] = [:]) -> APIRequest {
         var paramsWithRequired: [String: String] = params
         paramsWithRequired.append(contentsOf: requiredParams())
-        return NetworkManager.shared.request(url: url, with: method, headers: headers(), params: paramsWithRequired)
+        return NetworkManager.shared.requestQuery(url: url, with: method, headers: headers(), params: paramsWithRequired)
     }
     
     public func requestAPIWithJsonBody(url: String, with method: APIMethod, params: [String: Any] = [:]) -> APIRequest {
-        let addedParams = requiredParams()
-        var url = url
-        if addedParams.isNotEmpty {
-            url += "?"
+        let query = query(from: requiredParams())
+        return NetworkManager.shared.requestWithJsonBody(url: url + query, with: method, headers: headers(), params: params)
+    }
+    
+    private func query(from dict: [String: String]) -> String {
+        var query: String = ""
+        if dict.isNotEmpty {
+            query += "?"
             var isFirst = true
-            for (index, element) in addedParams.enumerated() {
+            for (index, element) in dict.enumerated() {
                 if !isFirst {
-                    url += "&"
+                    query += "&"
                     isFirst = false
                 }
-                url += "\(element.key)=\(element.value)"
+                query += "\(element.key)=\(element.value)"
             }
         }
-        return NetworkManager.shared.requestWithJsonBody(url: url, with: method, headers: headers(), params: params)
+        return query
     }
     
     private func requiredParams() -> [String: String] {

@@ -11,7 +11,6 @@ import TasBase
 extension ViewManager {
     
     public func goToMain() {
-        print(currentViewController)
         let window = currentViewController?.view.window
         
         window?.rootViewController?.dismiss(animated: false, completion: {

@@ -9,7 +9,21 @@ import UIKit
 
 open class BaseCollectionView: UICollectionView, BaseListViewProtocol {
     
-    public var viewModel: BaseListViewModel?
+    public var viewModel: BaseListViewModel? {
+        didSet {
+            viewModel?.frontSections.forEach { section in
+                if let headerViewClassName = section.headerViewModel?.frontViewProperty.className {
+                    register(BaseCollectionHeaderFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerViewClassName)
+                }
+                section.cellViewModels.forEach { viewModel in
+                    register(BaseCollectionViewCell.self, forCellWithReuseIdentifier: viewModel.frontViewProperty.className)
+                }
+                if let footerViewClassName = section.footerViewModel?.frontViewProperty.className {
+                    register(BaseCollectionHeaderFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: footerViewClassName)
+                }
+            }
+        }
+    }
     
     public override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
@@ -22,9 +36,6 @@ open class BaseCollectionView: UICollectionView, BaseListViewProtocol {
     }
     
     private func doInit() {
-        register(BaseCollectionViewCell.self, forCellWithReuseIdentifier: BaseCollectionViewCell.identifierStringForReuse)
-        register(BaseCollectionHeaderFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: BaseCollectionHeaderFooterView.identifierStringForReuse)
-        register(BaseCollectionHeaderFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: BaseCollectionHeaderFooterView.identifierStringForReuse)
         self.dataSource = self
         self.delegate = self
     }
@@ -32,14 +43,17 @@ open class BaseCollectionView: UICollectionView, BaseListViewProtocol {
 
 extension BaseCollectionView: BaseListViewModelDelegate {
     public func viewModelRefreshed(_ viewModel: BaseListViewModel) {
+        self.viewModel = viewModel
         reloadData()
     }
     
-    public func viewModelRefreshedCells(at indexPaths: [IndexPath]) {
+    public func viewModelRefreshedCells(_ viewModel: BaseListViewModel, at indexPaths: [IndexPath]) {
+        self.viewModel = viewModel
         reloadItems(at: indexPaths)
     }
     
-    public func viewModelRefreshedSections(sections: IndexSet) {
+    public func viewModelRefreshedSections(_ viewModel: BaseListViewModel, sections: IndexSet) {
+        self.viewModel = viewModel
         reloadSections(sections)
     }
 }
@@ -56,7 +70,7 @@ extension BaseCollectionView: UICollectionViewDelegate, UICollectionViewDataSour
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let frontViewModel = viewModel?.viewModel(at: indexPath) else { fatalError() }
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BaseCollectionViewCell.identifierStringForReuse, for: indexPath) as! BaseCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: frontViewModel.frontViewProperty.className, for: indexPath) as! BaseCollectionViewCell
         cell.setViewModel(frontViewModel, to: cell.contentView)
         return cell
     }
@@ -73,12 +87,12 @@ extension BaseCollectionView: UICollectionViewDelegate, UICollectionViewDataSour
     
     public func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
-        let cell = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: BaseCollectionHeaderFooterView.identifierStringForReuse, for: indexPath) as! BaseCollectionHeaderFooterView
-        
         if kind == UICollectionView.elementKindSectionHeader, let header = viewModel?.frontSections[safe: indexPath.section]?.headerViewModel {
+            let cell = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: header.frontViewProperty.className, for: indexPath) as! BaseCollectionHeaderFooterView
             cell.setViewModel(header, to: cell)
             return cell
         } else if kind == UICollectionView.elementKindSectionFooter, let footer = viewModel?.frontSections[safe: indexPath.section]?.footerViewModel {
+            let cell = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: footer.frontViewProperty.className, for: indexPath) as! BaseCollectionHeaderFooterView
             cell.setViewModel(footer, to: cell)
             return cell
         }

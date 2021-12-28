@@ -18,10 +18,4 @@ public class BaseCollectionViewCell: UICollectionViewCell, BaseListCellViewProto
     public required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    public override func prepareForReuse() {
-        super.prepareForReuse()
-        frontView?.removeFromSuperview()
-        frontView = nil
-    }
 }

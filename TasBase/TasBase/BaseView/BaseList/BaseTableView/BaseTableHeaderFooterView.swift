@@ -18,11 +18,4 @@ class BaseTableHeaderFooterView: UITableViewHeaderFooterView, BaseListCellViewPr
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        frontView?.removeFromSuperview()
-        frontView = nil
-    }
-    
 }

@@ -20,10 +20,12 @@ public protocol BaseJSONMappable: AnyObject {
 }
 
 public class ErrorModel: BaseJSONMappable {
+    public let success: Bool
     public let status_message: String
     public let status_code: Int
     
     public required init(from json: [String : Any]) {
+        success = json.bool(itemKey: "success") ?? false
         status_message = json.string(itemKey: "status_message") ?? ""
         status_code = json.integer(itemKey: "status_code") ?? 0
     }
@@ -51,7 +53,11 @@ public class APIRequest {
                 DispatchQueue.main.async {
                     if let jsonString = response.value, let jsonDict = jsonString.convertToDictionary() {
                         if response.error == nil {
-                            completion(.success(ResultType(from: jsonDict)))
+                            if jsonDict["status_code"] == nil {
+                                completion(.success(ResultType(from: jsonDict)))
+                            } else {
+                                completion(.failure(ErrorModel(from: jsonDict)))
+                            }
                         } else if response.error?.isResponseValidationError == true {
                             completion(.failure(ErrorModel(from: jsonDict)))
                         }
@@ -68,12 +74,12 @@ public class NetworkManager {
     
     private init() {}
 
-    public func requestQuery(url: String, with method: APIMethod, headers: [String: String], params: [String: Any] = [:]) -> APIRequest {
-        return request(url: url, with: method, headers: headers, params: params, isJsonBody: false)
+    public func requestQuery(url: String, with method: APIMethod, headers: [String: String], quries: [String: Any] = [:]) -> APIRequest {
+        return request(url: url, with: method, headers: headers, params: quries, isJsonBody: false)
     }
     
-    public func requestWithJsonBody(url: String, with method: APIMethod, headers: [String: String], params: [String: Any] = [:]) -> APIRequest {
-        return request(url: url, with: method, headers: headers, params: params, isJsonBody: true)
+    public func requestWithJsonBody(url: String, with method: APIMethod, headers: [String: String], body: [String: Any] = [:]) -> APIRequest {
+        return request(url: url, with: method, headers: headers, params: body, isJsonBody: true)
     }
     
     private func request(url: String, with method: APIMethod, headers: [String: String], params: [String: Any] = [:], isJsonBody: Bool) -> APIRequest {

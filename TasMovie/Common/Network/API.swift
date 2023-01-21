@@ -14,12 +14,12 @@ class API: APIProtocol {
     public func requestAPI(url: String, with method: APIMethod, params: [String: String] = [:]) -> APIRequest {
         var paramsWithRequired: [String: String] = params
         paramsWithRequired.append(contentsOf: requiredParams())
-        return NetworkManager.shared.requestQuery(url: url, with: method, headers: headers(), params: paramsWithRequired)
+        return NetworkManager.shared.requestQuery(url: url, with: method, headers: headers(), quries: paramsWithRequired)
     }
     
     public func requestAPIWithJsonBody(url: String, with method: APIMethod, params: [String: Any] = [:]) -> APIRequest {
         let query = query(from: requiredParams())
-        return NetworkManager.shared.requestWithJsonBody(url: url + query, with: method, headers: headers(), params: params)
+        return NetworkManager.shared.requestWithJsonBody(url: url + query, with: method, headers: headers(), body: params)
     }
     
     private func query(from dict: [String: String]) -> String {

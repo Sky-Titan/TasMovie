@@ -9,8 +9,9 @@ import Foundation
 
 public class NetworkConst {
     
-    static let baseUri = "https://api.themoviedb.org/3"
-    static let imageBaseUri = "https://image.tmdb.org/t/p"
+    static let scheme = "https"
+    static let baseUri = "\(scheme)://api.themoviedb.org/3"
+    static let imageBaseUri = "\(scheme)://image.tmdb.org/t/p"
     static var API_KEY: String {
         return Bundle.main.object(forInfoDictionaryKey: "TMDB_API_KEY") as? String ?? ""
     }
@@ -20,6 +21,13 @@ public class NetworkConst {
         static let find = "/find"
         static let search = "/search"
         static let authentication = "/authentication"
+        static let account = "/account"
+    }
+    
+    enum AccountUrl {
+        static var getAccountDetail: String {
+            return baseUri + Path.account
+        }
     }
     
     enum AuthenticationUrl {

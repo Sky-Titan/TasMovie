@@ -21,43 +21,37 @@ class IntroViewController: TSViewController, AuthenticationDataProvider {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        checkRequestToken()
-    }
-    
-    private func checkRequestToken() {
-        guard UserManager.shared.requestToken != nil else {
-            print("else")
-            requestNewToken()
-            return
-        }
         checkIfNeededLogin()
     }
     
-    private func requestNewToken() {
-        requestNewToken(completion: { [weak self] result in
-            guard let strongSelf = self else { return }
-            switch result {
-            case .success(let response):
-                if response.success {
-                    UserManager.shared.requestToken = response.request_token
-                    strongSelf.checkRequestToken()
-                }
-            case .failure(let error):
-                strongSelf.showAlert(title: "네트워크 오류", message: error.status_message, leftButtonTitle: "취소", leftButtonHandler: nil, rightButtonTitle: "재시도", rightButtonHandler: {
-                    strongSelf.requestNewToken()
-                })
-            }
-            
-        })
-    }
-    
+   
     private func checkIfNeededLogin() {
-        if UserManager.shared.sessionId != nil {
-            ViewManager.shared.goToMain()
+        if UserManager.shared.requestToken != nil {
+            if let sessionId = UserManager.shared.sessionId, sessionId.isNotEmpty {
+                ViewManager.shared.goToMain()
+            } else {
+                requestSession()
+            }
         } else {
             let loginVC = SignInViewController()
             ViewManager.shared.currentViewController?.present(loginVC, animated: true, completion: nil)
         }
-        
+    }
+    
+    func requestSession() {
+        guard let requestToken = UserManager.shared.requestToken else { return }
+        requestNewSession(request_token: requestToken, completion: { [weak self] result in
+            guard let strongSelf = self else { return }
+            switch result {
+            case .success(let response):
+                UserManager.shared.sessionId = response.session_id
+                ViewManager.shared.goToMain()
+            case .failure(let error):
+                ViewManager.shared.showAlert(title: error.status_code.description, message: error.status_message, leftButtonTitle: "취소", rightButtonTitle: "확인") {
+                    strongSelf.requestSession()
+                }
+            }
+            
+        })
     }
 }

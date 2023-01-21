@@ -32,4 +32,15 @@ extension String {
         }
         return nil
     }
+    
+    public static func localeToUtc(localeDate: String, dateFormat: String) -> String {
+        let dfFormat = DateFormatter()
+        dfFormat.dateFormat = dateFormat
+        dfFormat.timeZone = TimeZone.current
+        let dtLocaleDate = dfFormat.date(from: localeDate)
+            
+        dfFormat.timeZone = TimeZone(abbreviation: "UTC")
+        dfFormat.dateFormat = dateFormat
+        return dfFormat.string(from: dtLocaleDate!)
+    }
 }

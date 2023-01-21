@@ -14,6 +14,14 @@ class ConfigManager {
         guard let code = Locale.current.languageCode else { return .en }
         return SupportLanguage(rawValue: code) ?? .en
     }
+    
+    var currentTime: String {
+        let formatter = DateFormatter()
+        formatter.timeZone = TimeZone(abbreviation: "UTC")
+        formatter.dateFormat = dateFormat
+        return formatter.string(from: Date())
+    }
+    let dateFormat = "yyyy-MM-dd HH:mm:ss UTC"
 }
 
 enum SupportLanguage: String {
